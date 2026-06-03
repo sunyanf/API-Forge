@@ -1,0 +1,8 @@
+# Ignore binary and local files
+ai-forge
+*.exe
+*.dll
+*.so
+*.dylib
+/vendor
+.git

@@ -1,0 +1,984 @@
+2026/05/31 13:52:23 /src/internal/db/db.go:60
+[error] failed to initialize database, got error dial tcp: lookup db on 127.0.0.11:53: no such host
+2026/05/31 13:52:27 /src/internal/db/db.go:60
+[error] failed to initialize database, got error dial tcp: lookup db on 127.0.0.11:53: no such host
+2026/05/31 13:52:31 /src/internal/db/db.go:60
+[error] failed to initialize database, got error dial tcp: lookup db on 127.0.0.11:53: no such host
+2026/05/31 13:52:35 /src/internal/db/db.go:60
+[error] failed to initialize database, got error dial tcp: lookup db on 127.0.0.11:53: no such host
+2026/05/31 13:52:39 /src/internal/db/db.go:60
+[error] failed to initialize database, got error dial tcp: lookup db on 127.0.0.11:53: no such host
+2026/05/31 13:52:44 /src/internal/db/db.go:60
+[error] failed to initialize database, got error dial tcp: lookup db on 127.0.0.11:53: no such host
+2026/05/31 13:52:51 /src/internal/db/db.go:60
+[error] failed to initialize database, got error dial tcp: lookup db on 127.0.0.11:53: no such host
+2026/05/31 13:53:01 /src/internal/db/db.go:60
+[error] failed to initialize database, got error dial tcp: lookup db on 127.0.0.11:53: no such host
+2026/05/31 13:53:18 /src/internal/db/db.go:60
+[error] failed to initialize database, got error dial tcp: lookup db on 127.0.0.11:53: no such host
+2026/05/31 13:53:47 /src/internal/db/db.go:60
+[error] failed to initialize database, got error dial tcp: lookup db on 127.0.0.11:53: no such host
+2026/05/31 13:54:42 /src/internal/db/db.go:60
+[error] failed to initialize database, got error dial tcp: lookup db on 127.0.0.11:53: no such host
+2026/05/31 13:55:46 /src/internal/db/db.go:60
+[error] failed to initialize database, got error dial tcp: lookup db on 127.0.0.11:53: no such host
+2026/05/31 13:56:50 /src/internal/db/db.go:60
+[error] failed to initialize database, got error dial tcp: lookup db on 127.0.0.11:53: no such host
+2026/05/31 13:57:53 /src/internal/db/db.go:60
+[error] failed to initialize database, got error dial tcp: lookup db on 127.0.0.11:53: no such host
+2026/05/31 13:58:57 /src/internal/db/db.go:60
+[error] failed to initialize database, got error dial tcp: lookup db on 127.0.0.11:53: no such host
+2026/05/31 14:00:01 /src/internal/db/db.go:60
+[error] failed to initialize database, got error dial tcp: lookup db on 127.0.0.11:53: no such host
+2026/05/31 14:01:04 /src/internal/db/db.go:60
+[error] failed to initialize database, got error dial tcp: lookup db on 127.0.0.11:53: no such host
+2026/05/31 14:02:08 /src/internal/db/db.go:60
+[error] failed to initialize database, got error dial tcp: lookup db on 127.0.0.11:53: no such host
+2026/05/31 14:03:12 /src/internal/db/db.go:60
+[error] failed to initialize database, got error dial tcp: lookup db on 127.0.0.11:53: no such host
+2026/05/31 14:04:16 /src/internal/db/db.go:60
+[error] failed to initialize database, got error dial tcp: lookup db on 127.0.0.11:53: no such host
+2026/05/31 14:05:19 /src/internal/db/db.go:60
+[error] failed to initialize database, got error dial tcp: lookup db on 127.0.0.11:53: no such host
+2026/05/31 14:06:23 /src/internal/db/db.go:60
+[error] failed to initialize database, got error dial tcp: lookup db on 127.0.0.11:53: no such host
+2026/05/31 14:07:27 /src/internal/db/db.go:60
+[error] failed to initialize database, got error dial tcp: lookup db on 127.0.0.11:53: no such host
+2026/05/31 14:08:30 /src/internal/db/db.go:60
+[error] failed to initialize database, got error dial tcp: lookup db on 127.0.0.11:53: no such host
+2026/05/31 14:09:34 /src/internal/db/db.go:60
+[error] failed to initialize database, got error dial tcp: lookup db on 127.0.0.11:53: no such host
+2026/05/31 14:10:38 /src/internal/db/db.go:60
+[error] failed to initialize database, got error dial tcp: lookup db on 127.0.0.11:53: no such host
+2026/05/31 14:11:42 /src/internal/db/db.go:60
+[error] failed to initialize database, got error dial tcp: lookup db on 127.0.0.11:53: no such host
+2026/05/31 14:12:45 /src/internal/db/db.go:60
+[error] failed to initialize database, got error dial tcp: lookup db on 127.0.0.11:53: no such host
+2026/05/31 14:13:49 /src/internal/db/db.go:60
+[error] failed to initialize database, got error dial tcp: lookup db on 127.0.0.11:53: no such host
+2026/05/31 14:14:53 /src/internal/db/db.go:60
+[error] failed to initialize database, got error dial tcp: lookup db on 127.0.0.11:53: no such host
+2026/05/31 14:15:57 /src/internal/db/db.go:60
+[error] failed to initialize database, got error dial tcp: lookup db on 127.0.0.11:53: no such host
+2026/05/31 14:17:00 /src/internal/db/db.go:60
+[error] failed to initialize database, got error dial tcp: lookup db on 127.0.0.11:53: no such host
+2026/05/31 14:18:04 /src/internal/db/db.go:60
+[error] failed to initialize database, got error dial tcp: lookup db on 127.0.0.11:53: no such host
+2026/05/31 14:19:08 /src/internal/db/db.go:60
+[error] failed to initialize database, got error dial tcp: lookup db on 127.0.0.11:53: no such host
+2026/05/31 14:20:12 /src/internal/db/db.go:60
+[error] failed to initialize database, got error dial tcp: lookup db on 127.0.0.11:53: no such host
+2026/05/31 14:21:15 /src/internal/db/db.go:60
+[error] failed to initialize database, got error dial tcp: lookup db on 127.0.0.11:53: no such host
+2026/05/31 14:22:19 /src/internal/db/db.go:60
+[error] failed to initialize database, got error dial tcp: lookup db on 127.0.0.11:53: no such host
+2026/05/31 14:23:23 /src/internal/db/db.go:60
+[error] failed to initialize database, got error dial tcp: lookup db on 127.0.0.11:53: no such host
+2026/05/31 14:24:27 /src/internal/db/db.go:60
+[error] failed to initialize database, got error dial tcp: lookup db on 127.0.0.11:53: no such host
+2026/05/31 14:25:30 /src/internal/db/db.go:60
+[error] failed to initialize database, got error dial tcp: lookup db on 127.0.0.11:53: no such host
+2026/05/31 14:26:34 /src/internal/db/db.go:60
+[error] failed to initialize database, got error dial tcp: lookup db on 127.0.0.11:53: no such host
+2026/05/31 14:27:38 /src/internal/db/db.go:60
+[error] failed to initialize database, got error dial tcp: lookup db on 127.0.0.11:53: no such host
+2026/05/31 14:28:41 /src/internal/db/db.go:60
+[error] failed to initialize database, got error dial tcp: lookup db on 127.0.0.11:53: no such host
+2026/05/31 14:29:45 /src/internal/db/db.go:60
+[error] failed to initialize database, got error dial tcp: lookup db on 127.0.0.11:53: no such host
+2026/05/31 14:30:49 /src/internal/db/db.go:60
+[error] failed to initialize database, got error dial tcp: lookup db on 127.0.0.11:53: no such host
+2026/05/31 14:31:53 /src/internal/db/db.go:60
+[error] failed to initialize database, got error dial tcp: lookup db on 127.0.0.11:53: no such host
+2026/05/31 14:32:56 /src/internal/db/db.go:60
+[error] failed to initialize database, got error dial tcp: lookup db on 127.0.0.11:53: no such host
+2026/05/31 14:34:00 /src/internal/db/db.go:60
+[error] failed to initialize database, got error dial tcp: lookup db on 127.0.0.11:53: no such host
+2026/05/31 14:35:04 /src/internal/db/db.go:60
+[error] failed to initialize database, got error dial tcp: lookup db on 127.0.0.11:53: no such host
+2026/05/31 14:36:08 /src/internal/db/db.go:60
+[error] failed to initialize database, got error dial tcp: lookup db on 127.0.0.11:53: no such host
+2026/05/31 14:37:11 /src/internal/db/db.go:60
+[error] failed to initialize database, got error dial tcp: lookup db on 127.0.0.11:53: no such host
+2026/05/31 14:38:15 /src/internal/db/db.go:60
+[error] failed to initialize database, got error dial tcp: lookup db on 127.0.0.11:53: no such host
+2026/05/31 14:39:19 /src/internal/db/db.go:60
+[error] failed to initialize database, got error dial tcp: lookup db on 127.0.0.11:53: no such host
+2026/05/31 14:40:23 /src/internal/db/db.go:60
+[error] failed to initialize database, got error dial tcp: lookup db on 127.0.0.11:53: no such host
+2026/05/31 14:41:26 /src/internal/db/db.go:60
+[error] failed to initialize database, got error dial tcp: lookup db on 127.0.0.11:53: no such host
+2026/05/31 14:42:30 /src/internal/db/db.go:60
+[error] failed to initialize database, got error dial tcp: lookup db on 127.0.0.11:53: no such host
+2026/05/31 14:43:34 /src/internal/db/db.go:60
+[error] failed to initialize database, got error dial tcp: lookup db on 127.0.0.11:53: no such host
+2026/05/31 14:44:37 /src/internal/db/db.go:60
+[error] failed to initialize database, got error dial tcp: lookup db on 127.0.0.11:53: no such host
+2026/05/31 14:45:41 /src/internal/db/db.go:60
+[error] failed to initialize database, got error dial tcp: lookup db on 127.0.0.11:53: no such host
+2026/05/31 14:46:45 /src/internal/db/db.go:60
+[error] failed to initialize database, got error dial tcp: lookup db on 127.0.0.11:53: no such host
+2026/05/31 14:47:49 /src/internal/db/db.go:60
+[error] failed to initialize database, got error dial tcp: lookup db on 127.0.0.11:53: no such host
+2026/05/31 14:48:53 /src/internal/db/db.go:60
+[error] failed to initialize database, got error dial tcp: lookup db on 127.0.0.11:53: no such host
+2026/05/31 14:49:56 /src/internal/db/db.go:60
+[error] failed to initialize database, got error dial tcp: lookup db on 127.0.0.11:53: no such host
+2026/05/31 14:51:00 /src/internal/db/db.go:60
+[error] failed to initialize database, got error dial tcp: lookup db on 127.0.0.11:53: no such host
+2026/05/31 14:52:03 /src/internal/db/db.go:60
+[error] failed to initialize database, got error dial tcp: lookup db on 127.0.0.11:53: no such host
+2026/05/31 14:53:07 /src/internal/db/db.go:60
+[error] failed to initialize database, got error dial tcp: lookup db on 127.0.0.11:53: no such host
+2026/05/31 14:54:11 /src/internal/db/db.go:60
+[error] failed to initialize database, got error dial tcp: lookup db on 127.0.0.11:53: no such host
+2026/05/31 14:55:14 /src/internal/db/db.go:60
+[error] failed to initialize database, got error dial tcp: lookup db on 127.0.0.11:53: no such host
+2026/05/31 14:56:18 /src/internal/db/db.go:60
+[error] failed to initialize database, got error dial tcp: lookup db on 127.0.0.11:53: no such host
+2026/05/31 14:57:22 /src/internal/db/db.go:60
+[error] failed to initialize database, got error dial tcp: lookup db on 127.0.0.11:53: no such host
+2026/05/31 14:58:25 /src/internal/db/db.go:60
+[error] failed to initialize database, got error dial tcp: lookup db on 127.0.0.11:53: no such host
+2026/05/31 14:59:29 /src/internal/db/db.go:60
+[error] failed to initialize database, got error dial tcp: lookup db on 127.0.0.11:53: no such host
+2026/05/31 15:00:33 /src/internal/db/db.go:60
+[error] failed to initialize database, got error dial tcp: lookup db on 127.0.0.11:53: no such host
+2026/05/31 15:01:36 /src/internal/db/db.go:60
+[error] failed to initialize database, got error dial tcp: lookup db on 127.0.0.11:53: no such host
+2026/05/31 15:02:40 /src/internal/db/db.go:60
+[error] failed to initialize database, got error dial tcp: lookup db on 127.0.0.11:53: no such host
+2026/05/31 15:03:44 /src/internal/db/db.go:60
+[error] failed to initialize database, got error dial tcp: lookup db on 127.0.0.11:53: no such host
+2026/05/31 15:04:48 /src/internal/db/db.go:60
+[error] failed to initialize database, got error dial tcp: lookup db on 127.0.0.11:53: no such host
+2026/05/31 15:05:51 /src/internal/db/db.go:60
+[error] failed to initialize database, got error dial tcp: lookup db on 127.0.0.11:53: no such host
+2026/05/31 15:06:55 /src/internal/db/db.go:60
+[error] failed to initialize database, got error dial tcp: lookup db on 127.0.0.11:53: no such host
+2026/05/31 15:07:59 /src/internal/db/db.go:60
+[error] failed to initialize database, got error dial tcp: lookup db on 127.0.0.11:53: no such host
+2026/05/31 15:09:03 /src/internal/db/db.go:60
+[error] failed to initialize database, got error dial tcp: lookup db on 127.0.0.11:53: no such host
+2026/05/31 15:10:07 /src/internal/db/db.go:60
+[error] failed to initialize database, got error dial tcp: lookup db on 127.0.0.11:53: no such host
+2026/05/31 15:11:10 /src/internal/db/db.go:60
+[error] failed to initialize database, got error dial tcp: lookup db on 127.0.0.11:53: no such host
+2026/05/31 15:12:14 /src/internal/db/db.go:60
+[error] failed to initialize database, got error dial tcp: lookup db on 127.0.0.11:53: no such host
+2026/05/31 15:13:18 /src/internal/db/db.go:60
+[error] failed to initialize database, got error dial tcp: lookup db on 127.0.0.11:53: no such host
+2026/05/31 15:14:22 /src/internal/db/db.go:60
+[error] failed to initialize database, got error dial tcp: lookup db on 127.0.0.11:53: no such host
+2026/05/31 15:15:25 /src/internal/db/db.go:60
+[error] failed to initialize database, got error dial tcp: lookup db on 127.0.0.11:53: no such host
+2026/05/31 15:16:29 /src/internal/db/db.go:60
+[error] failed to initialize database, got error dial tcp: lookup db on 127.0.0.11:53: no such host
+2026/05/31 15:17:33 /src/internal/db/db.go:60
+[error] failed to initialize database, got error dial tcp: lookup db on 127.0.0.11:53: no such host
+2026/05/31 15:18:37 /src/internal/db/db.go:60
+[error] failed to initialize database, got error dial tcp: lookup db on 127.0.0.11:53: no such host
+2026/05/31 15:19:41 /src/internal/db/db.go:60
+[error] failed to initialize database, got error dial tcp: lookup db on 127.0.0.11:53: no such host
+2026/05/31 15:20:44 /src/internal/db/db.go:60
+[error] failed to initialize database, got error dial tcp: lookup db on 127.0.0.11:53: no such host
+2026/05/31 15:21:48 /src/internal/db/db.go:60
+[error] failed to initialize database, got error dial tcp: lookup db on 127.0.0.11:53: no such host
+2026/05/31 15:22:52 /src/internal/db/db.go:60
+[error] failed to initialize database, got error dial tcp: lookup db on 127.0.0.11:53: no such host
+2026/05/31 15:23:56 /src/internal/db/db.go:60
+[error] failed to initialize database, got error dial tcp: lookup db on 127.0.0.11:53: no such host
+2026/05/31 15:25:00 /src/internal/db/db.go:60
+[error] failed to initialize database, got error dial tcp: lookup db on 127.0.0.11:53: no such host
+2026/05/31 15:26:03 /src/internal/db/db.go:60
+[error] failed to initialize database, got error dial tcp: lookup db on 127.0.0.11:53: no such host
+2026/05/31 15:27:07 /src/internal/db/db.go:60
+[error] failed to initialize database, got error dial tcp: lookup db on 127.0.0.11:53: no such host
+2026/05/31 15:28:11 /src/internal/db/db.go:60
+[error] failed to initialize database, got error dial tcp: lookup db on 127.0.0.11:53: no such host
+2026/05/31 15:29:14 /src/internal/db/db.go:60
+[error] failed to initialize database, got error dial tcp: lookup db on 127.0.0.11:53: no such host
+2026/05/31 15:30:18 /src/internal/db/db.go:60
+[error] failed to initialize database, got error dial tcp: lookup db on 127.0.0.11:53: no such host
+2026/05/31 15:31:22 /src/internal/db/db.go:60
+[error] failed to initialize database, got error dial tcp: lookup db on 127.0.0.11:53: no such host
+2026/05/31 15:32:26 /src/internal/db/db.go:60
+[error] failed to initialize database, got error dial tcp: lookup db on 127.0.0.11:53: no such host
+2026/05/31 15:33:29 /src/internal/db/db.go:60
+[error] failed to initialize database, got error dial tcp: lookup db on 127.0.0.11:53: no such host
+2026/05/31 15:34:33 /src/internal/db/db.go:60
+[error] failed to initialize database, got error dial tcp: lookup db on 127.0.0.11:53: no such host
+2026/05/31 15:35:37 /src/internal/db/db.go:60
+[error] failed to initialize database, got error dial tcp: lookup db on 127.0.0.11:53: no such host
+2026/05/31 15:36:40 /src/internal/db/db.go:60
+[error] failed to initialize database, got error dial tcp: lookup db on 127.0.0.11:53: no such host
+2026/05/31 15:37:44 /src/internal/db/db.go:60
+[error] failed to initialize database, got error dial tcp: lookup db on 127.0.0.11:53: no such host
+2026/05/31 15:38:48 /src/internal/db/db.go:60
+[error] failed to initialize database, got error dial tcp: lookup db on 127.0.0.11:53: no such host
+2026/05/31 15:39:51 /src/internal/db/db.go:60
+[error] failed to initialize database, got error dial tcp: lookup db on 127.0.0.11:53: no such host
+2026/05/31 15:40:55 /src/internal/db/db.go:60
+[error] failed to initialize database, got error dial tcp: lookup db on 127.0.0.11:53: no such host
+2026/05/31 15:41:59 /src/internal/db/db.go:60
+[error] failed to initialize database, got error dial tcp: lookup db on 127.0.0.11:53: no such host
+2026/05/31 15:43:03 /src/internal/db/db.go:60
+[error] failed to initialize database, got error dial tcp: lookup db on 127.0.0.11:53: no such host
+2026/05/31 15:44:07 /src/internal/db/db.go:60
+[error] failed to initialize database, got error dial tcp: lookup db on 127.0.0.11:53: no such host
+2026/05/31 15:45:10 /src/internal/db/db.go:60
+[error] failed to initialize database, got error dial tcp: lookup db on 127.0.0.11:53: no such host
+2026/05/31 15:46:14 /src/internal/db/db.go:60
+[error] failed to initialize database, got error dial tcp: lookup db on 127.0.0.11:53: no such host
+2026/05/31 15:47:18 /src/internal/db/db.go:60
+[error] failed to initialize database, got error dial tcp: lookup db on 127.0.0.11:53: no such host
+2026/05/31 15:48:21 /src/internal/db/db.go:60
+[error] failed to initialize database, got error dial tcp: lookup db on 127.0.0.11:53: no such host
+2026/05/31 15:49:25 /src/internal/db/db.go:60
+[error] failed to initialize database, got error dial tcp: lookup db on 127.0.0.11:53: no such host
+2026/05/31 15:50:29 /src/internal/db/db.go:60
+[error] failed to initialize database, got error dial tcp: lookup db on 127.0.0.11:53: no such host
+2026/05/31 15:51:33 /src/internal/db/db.go:60
+[error] failed to initialize database, got error dial tcp: lookup db on 127.0.0.11:53: no such host
+2026/05/31 15:52:37 /src/internal/db/db.go:60
+[error] failed to initialize database, got error dial tcp: lookup db on 127.0.0.11:53: no such host
+2026/05/31 15:53:40 /src/internal/db/db.go:60
+[error] failed to initialize database, got error dial tcp: lookup db on 127.0.0.11:53: no such host
+2026/05/31 15:54:44 /src/internal/db/db.go:60
+[error] failed to initialize database, got error dial tcp: lookup db on 127.0.0.11:53: no such host
+2026/05/31 15:55:48 /src/internal/db/db.go:60
+[error] failed to initialize database, got error dial tcp: lookup db on 127.0.0.11:53: no such host
+2026/05/31 15:56:52 /src/internal/db/db.go:60
+[error] failed to initialize database, got error dial tcp: lookup db on 127.0.0.11:53: no such host
+2026/05/31 15:57:55 /src/internal/db/db.go:60
+[error] failed to initialize database, got error dial tcp: lookup db on 127.0.0.11:53: no such host
+2026/05/31 15:58:59 /src/internal/db/db.go:60
+[error] failed to initialize database, got error dial tcp: lookup db on 127.0.0.11:53: no such host
+2026/05/31 16:00:03 /src/internal/db/db.go:60
+[error] failed to initialize database, got error dial tcp: lookup db on 127.0.0.11:53: no such host
+2026/05/31 16:01:07 /src/internal/db/db.go:60
+[error] failed to initialize database, got error dial tcp: lookup db on 127.0.0.11:53: no such host
+2026/05/31 16:02:10 /src/internal/db/db.go:60
+[error] failed to initialize database, got error dial tcp: lookup db on 127.0.0.11:53: no such host
+2026/05/31 16:03:14 /src/internal/db/db.go:60
+[error] failed to initialize database, got error dial tcp: lookup db on 127.0.0.11:53: no such host
+2026/05/31 16:04:18 /src/internal/db/db.go:60
+[error] failed to initialize database, got error dial tcp: lookup db on 127.0.0.11:53: no such host
+2026/05/31 16:05:22 /src/internal/db/db.go:60
+[error] failed to initialize database, got error dial tcp: lookup db on 127.0.0.11:53: no such host
+2026/05/31 16:06:26 /src/internal/db/db.go:60
+[error] failed to initialize database, got error dial tcp: lookup db on 127.0.0.11:53: no such host
+2026/05/31 16:07:29 /src/internal/db/db.go:60
+[error] failed to initialize database, got error dial tcp: lookup db on 127.0.0.11:53: no such host
+2026/05/31 16:08:33 /src/internal/db/db.go:60
+[error] failed to initialize database, got error dial tcp: lookup db on 127.0.0.11:53: no such host
+2026/05/31 16:08:47 /src/internal/db/db.go:66
+[error] failed to initialize database, got error dial tcp: lookup db on 127.0.0.11:53: no such host
+2026/05/31 16:08:53 /src/internal/db/db.go:66
+[error] failed to initialize database, got error dial tcp: lookup db on 127.0.0.11:53: no such host
+2026/05/31 16:08:58 /src/internal/db/db.go:66
+[error] failed to initialize database, got error dial tcp: lookup db on 127.0.0.11:53: no such host
+2026/05/31 16:09:03 /src/internal/db/db.go:66
+[error] failed to initialize database, got error dial tcp: lookup db on 127.0.0.11:53: no such host
+2026/05/31 16:09:09 /src/internal/db/db.go:66
+[error] failed to initialize database, got error dial tcp: lookup db on 127.0.0.11:53: no such host
+2026/05/31 16:09:14 /src/internal/db/db.go:66
+[error] failed to initialize database, got error dial tcp: lookup db on 127.0.0.11:53: no such host
+2026/05/31 16:09:19 /src/internal/db/db.go:66
+[error] failed to initialize database, got error dial tcp: lookup db on 127.0.0.11:53: no such host
+2026/05/31 16:09:25 /src/internal/db/db.go:66
+[error] failed to initialize database, got error dial tcp: lookup db on 127.0.0.11:53: no such host
+2026/05/31 16:09:30 /src/internal/db/db.go:66
+[error] failed to initialize database, got error dial tcp: lookup db on 127.0.0.11:53: no such host
+2026/05/31 16:09:35 /src/internal/db/db.go:66
+[error] failed to initialize database, got error dial tcp: lookup db on 127.0.0.11:53: no such host
+2026/05/31 16:09:41 /src/internal/db/db.go:66
+[error] failed to initialize database, got error dial tcp: lookup db on 127.0.0.11:53: no such host
+2026/05/31 16:09:46 /src/internal/db/db.go:66
+[error] failed to initialize database, got error dial tcp: lookup db on 127.0.0.11:53: no such host
+2026/05/31 16:09:51 /src/internal/db/db.go:66
+[error] failed to initialize database, got error dial tcp: lookup db on 127.0.0.11:53: no such host
+2026/05/31 16:09:57 /src/internal/db/db.go:66
+[error] failed to initialize database, got error dial tcp: lookup db on 127.0.0.11:53: no such host
+2026/05/31 16:10:02 /src/internal/db/db.go:66
+[error] failed to initialize database, got error dial tcp: lookup db on 127.0.0.11:53: no such host
+2026/05/31 16:10:08 /src/internal/db/db.go:66
+[error] failed to initialize database, got error dial tcp: lookup db on 127.0.0.11:53: no such host
+2026/05/31 16:10:13 /src/internal/db/db.go:66
+[error] failed to initialize database, got error dial tcp: lookup db on 127.0.0.11:53: no such host
+2026/05/31 16:10:18 /src/internal/db/db.go:66
+[error] failed to initialize database, got error dial tcp: lookup db on 127.0.0.11:53: no such host
+2026/05/31 16:10:24 /src/internal/db/db.go:66
+[error] failed to initialize database, got error dial tcp: lookup db on 127.0.0.11:53: no such host
+2026/05/31 16:10:29 /src/internal/db/db.go:66
+[error] failed to initialize database, got error dial tcp: lookup db on 127.0.0.11:53: no such host
+2026/05/31 16:10:34 /src/internal/db/db.go:66
+[error] failed to initialize database, got error dial tcp: lookup db on 127.0.0.11:53: no such host
+2026/05/31 16:10:40 /src/internal/db/db.go:66
+[error] failed to initialize database, got error dial tcp: lookup db on 127.0.0.11:53: no such host
+2026/05/31 16:10:45 /src/internal/db/db.go:66
+[error] failed to initialize database, got error dial tcp: lookup db on 127.0.0.11:53: no such host
+2026/05/31 16:10:50 /src/internal/db/db.go:66
+[error] failed to initialize database, got error dial tcp: lookup db on 127.0.0.11:53: no such host
+2026/05/31 16:10:56 /src/internal/db/db.go:66
+[error] failed to initialize database, got error dial tcp: lookup db on 127.0.0.11:53: no such host
+2026/05/31 16:11:01 /src/internal/db/db.go:66
+[error] failed to initialize database, got error dial tcp: lookup db on 127.0.0.11:53: no such host
+2026/05/31 16:11:06 /src/internal/db/db.go:66
+[error] failed to initialize database, got error dial tcp: lookup db on 127.0.0.11:53: no such host
+2026/05/31 16:11:12 /src/internal/db/db.go:66
+[error] failed to initialize database, got error dial tcp: lookup db on 127.0.0.11:53: no such host
+2026/05/31 16:11:17 /src/internal/db/db.go:66
+[error] failed to initialize database, got error dial tcp: lookup db on 127.0.0.11:53: no such host
+2026/05/31 16:11:22 /src/internal/db/db.go:66
+[error] failed to initialize database, got error dial tcp: lookup db on 127.0.0.11:53: no such host
+2026/05/31 16:11:28 /src/internal/db/db.go:66
+[error] failed to initialize database, got error dial tcp: lookup db on 127.0.0.11:53: no such host
+2026/05/31 16:11:34 /src/internal/db/db.go:66
+[error] failed to initialize database, got error dial tcp: lookup db on 127.0.0.11:53: no such host
+2026/05/31 16:11:39 /src/internal/db/db.go:66
+[error] failed to initialize database, got error dial tcp: lookup db on 127.0.0.11:53: no such host
+2026/05/31 16:11:44 /src/internal/db/db.go:66
+[error] failed to initialize database, got error dial tcp: lookup db on 127.0.0.11:53: no such host
+2026/05/31 16:11:50 /src/internal/db/db.go:66
+[error] failed to initialize database, got error dial tcp: lookup db on 127.0.0.11:53: no such host
+2026/05/31 16:11:55 /src/internal/db/db.go:66
+[error] failed to initialize database, got error dial tcp: lookup db on 127.0.0.11:53: no such host
+2026/05/31 16:12:00 /src/internal/db/db.go:66
+[error] failed to initialize database, got error dial tcp: lookup db on 127.0.0.11:53: no such host
+2026/05/31 16:12:06 /src/internal/db/db.go:66
+[error] failed to initialize database, got error dial tcp: lookup db on 127.0.0.11:53: no such host
+2026/05/31 16:12:11 /src/internal/db/db.go:66
+[error] failed to initialize database, got error dial tcp: lookup db on 127.0.0.11:53: no such host
+2026/05/31 16:12:16 /src/internal/db/db.go:66
+[error] failed to initialize database, got error dial tcp: lookup db on 127.0.0.11:53: no such host
+2026/05/31 16:12:22 /src/internal/db/db.go:66
+[error] failed to initialize database, got error dial tcp: lookup db on 127.0.0.11:53: no such host
+2026/05/31 16:12:27 /src/internal/db/db.go:66
+[error] failed to initialize database, got error dial tcp: lookup db on 127.0.0.11:53: no such host
+2026/05/31 16:12:32 /src/internal/db/db.go:66
+[error] failed to initialize database, got error dial tcp: lookup db on 127.0.0.11:53: no such host
+2026/05/31 16:12:38 /src/internal/db/db.go:66
+[error] failed to initialize database, got error dial tcp: lookup db on 127.0.0.11:53: no such host
+2026/05/31 16:12:43 /src/internal/db/db.go:66
+[error] failed to initialize database, got error dial tcp: lookup db on 127.0.0.11:53: no such host
+2026/05/31 16:12:49 /src/internal/db/db.go:66
+[error] failed to initialize database, got error dial tcp: lookup db on 127.0.0.11:53: no such host
+2026/05/31 16:12:54 /src/internal/db/db.go:66
+[error] failed to initialize database, got error dial tcp: lookup db on 127.0.0.11:53: no such host
+2026/05/31 16:12:59 /src/internal/db/db.go:66
+[error] failed to initialize database, got error dial tcp: lookup db on 127.0.0.11:53: no such host
+2026/05/31 16:13:05 /src/internal/db/db.go:66
+[error] failed to initialize database, got error dial tcp: lookup db on 127.0.0.11:53: no such host
+2026/05/31 16:13:10 /src/internal/db/db.go:66
+[error] failed to initialize database, got error dial tcp: lookup db on 127.0.0.11:53: no such host
+2026/05/31 16:13:15 /src/internal/db/db.go:66
+[error] failed to initialize database, got error dial tcp: lookup db on 127.0.0.11:53: no such host
+2026/05/31 16:13:21 /src/internal/db/db.go:66
+[error] failed to initialize database, got error dial tcp: lookup db on 127.0.0.11:53: no such host
+2026/05/31 16:13:26 /src/internal/db/db.go:66
+[error] failed to initialize database, got error dial tcp: lookup db on 127.0.0.11:53: no such host
+2026/05/31 16:13:31 /src/internal/db/db.go:66
+[error] failed to initialize database, got error dial tcp: lookup db on 127.0.0.11:53: no such host
+2026/05/31 16:13:37 /src/internal/db/db.go:66
+[error] failed to initialize database, got error dial tcp: lookup db on 127.0.0.11:53: no such host
+2026/05/31 16:13:42 /src/internal/db/db.go:66
+[error] failed to initialize database, got error dial tcp: lookup db on 127.0.0.11:53: no such host
+2026/05/31 16:13:47 /src/internal/db/db.go:66
+[error] failed to initialize database, got error dial tcp: lookup db on 127.0.0.11:53: no such host
+2026/05/31 16:13:53 /src/internal/db/db.go:66
+[error] failed to initialize database, got error dial tcp: lookup db on 127.0.0.11:53: no such host
+2026/05/31 16:13:58 /src/internal/db/db.go:66
+[error] failed to initialize database, got error dial tcp: lookup db on 127.0.0.11:53: no such host
+2026/05/31 16:14:03 /src/internal/db/db.go:66
+[error] failed to initialize database, got error dial tcp: lookup db on 127.0.0.11:53: no such host
+2026/05/31 16:14:09 /src/internal/db/db.go:66
+[error] failed to initialize database, got error dial tcp: lookup db on 127.0.0.11:53: no such host
+2026/05/31 16:14:15 /src/internal/db/db.go:66
+[error] failed to initialize database, got error dial tcp: lookup db on 127.0.0.11:53: no such host
+2026/05/31 16:14:20 /src/internal/db/db.go:66
+[error] failed to initialize database, got error dial tcp: lookup db on 127.0.0.11:53: no such host
+2026/05/31 16:14:25 /src/internal/db/db.go:66
+[error] failed to initialize database, got error dial tcp: lookup db on 127.0.0.11:53: no such host
+2026/05/31 16:14:31 /src/internal/db/db.go:66
+[error] failed to initialize database, got error dial tcp: lookup db on 127.0.0.11:53: no such host
+2026/05/31 16:14:36 /src/internal/db/db.go:66
+[error] failed to initialize database, got error dial tcp: lookup db on 127.0.0.11:53: no such host
+2026/05/31 16:14:41 /src/internal/db/db.go:66
+[error] failed to initialize database, got error dial tcp: lookup db on 127.0.0.11:53: no such host
+2026/05/31 16:14:47 /src/internal/db/db.go:66
+[error] failed to initialize database, got error dial tcp: lookup db on 127.0.0.11:53: no such host
+2026/05/31 16:14:52 /src/internal/db/db.go:66
+[error] failed to initialize database, got error dial tcp: lookup db on 127.0.0.11:53: no such host
+2026/05/31 16:14:57 /src/internal/db/db.go:66
+[error] failed to initialize database, got error dial tcp: lookup db on 127.0.0.11:53: no such host
+2026/05/31 16:15:03 /src/internal/db/db.go:66
+[error] failed to initialize database, got error dial tcp: lookup db on 127.0.0.11:53: no such host
+2026/05/31 16:15:08 /src/internal/db/db.go:66
+[error] failed to initialize database, got error dial tcp: lookup db on 127.0.0.11:53: no such host
+2026/05/31 16:15:13 /src/internal/db/db.go:66
+[error] failed to initialize database, got error dial tcp: lookup db on 127.0.0.11:53: no such host
+2026/05/31 16:15:19 /src/internal/db/db.go:66
+[error] failed to initialize database, got error dial tcp: lookup db on 127.0.0.11:53: no such host
+2026/05/31 16:15:24 /src/internal/db/db.go:66
+[error] failed to initialize database, got error dial tcp: lookup db on 127.0.0.11:53: no such host
+2026/05/31 16:15:30 /src/internal/db/db.go:66
+[error] failed to initialize database, got error dial tcp: lookup db on 127.0.0.11:53: no such host
+2026/05/31 16:15:35 /src/internal/db/db.go:66
+[error] failed to initialize database, got error dial tcp: lookup db on 127.0.0.11:53: no such host
+2026/05/31 16:15:40 /src/internal/db/db.go:66
+[error] failed to initialize database, got error dial tcp: lookup db on 127.0.0.11:53: no such host
+2026/05/31 16:15:46 /src/internal/db/db.go:66
+[error] failed to initialize database, got error dial tcp: lookup db on 127.0.0.11:53: no such host
+2026/05/31 16:15:51 /src/internal/db/db.go:66
+[error] failed to initialize database, got error dial tcp: lookup db on 127.0.0.11:53: no such host
+2026/05/31 16:15:56 /src/internal/db/db.go:66
+[error] failed to initialize database, got error dial tcp: lookup db on 127.0.0.11:53: no such host
+2026/05/31 16:16:02 /src/internal/db/db.go:66
+[error] failed to initialize database, got error dial tcp: lookup db on 127.0.0.11:53: no such host
+2026/05/31 16:16:07 /src/internal/db/db.go:66
+[error] failed to initialize database, got error dial tcp: lookup db on 127.0.0.11:53: no such host
+2026/05/31 16:16:13 /src/internal/db/db.go:66
+[error] failed to initialize database, got error dial tcp: lookup db on 127.0.0.11:53: no such host
+2026/05/31 16:16:18 /src/internal/db/db.go:66
+[error] failed to initialize database, got error dial tcp: lookup db on 127.0.0.11:53: no such host
+2026/05/31 16:16:23 /src/internal/db/db.go:66
+[error] failed to initialize database, got error dial tcp: lookup db on 127.0.0.11:53: no such host
+2026/05/31 16:16:29 /src/internal/db/db.go:66
+[error] failed to initialize database, got error dial tcp: lookup db on 127.0.0.11:53: no such host
+2026/05/31 16:16:34 /src/internal/db/db.go:66
+[error] failed to initialize database, got error dial tcp: lookup db on 127.0.0.11:53: no such host
+2026/05/31 16:16:39 /src/internal/db/db.go:66
+[error] failed to initialize database, got error dial tcp: lookup db on 127.0.0.11:53: no such host
+2026/05/31 16:16:45 /src/internal/db/db.go:66
+[error] failed to initialize database, got error dial tcp: lookup db on 127.0.0.11:53: no such host
+2026/05/31 16:16:50 /src/internal/db/db.go:66
+[error] failed to initialize database, got error dial tcp: lookup db on 127.0.0.11:53: no such host
+2026/05/31 16:16:56 /src/internal/db/db.go:66
+[error] failed to initialize database, got error dial tcp: lookup db on 127.0.0.11:53: no such host
+2026/05/31 16:17:01 /src/internal/db/db.go:66
+[error] failed to initialize database, got error dial tcp: lookup db on 127.0.0.11:53: no such host
+2026/05/31 16:17:06 /src/internal/db/db.go:66
+[error] failed to initialize database, got error dial tcp: lookup db on 127.0.0.11:53: no such host
+2026/05/31 16:17:12 /src/internal/db/db.go:66
+[error] failed to initialize database, got error dial tcp: lookup db on 127.0.0.11:53: no such host
+2026/05/31 16:17:17 /src/internal/db/db.go:66
+[error] failed to initialize database, got error dial tcp: lookup db on 127.0.0.11:53: no such host
+2026/05/31 16:17:22 /src/internal/db/db.go:66
+[error] failed to initialize database, got error dial tcp: lookup db on 127.0.0.11:53: no such host
+2026/05/31 16:17:28 /src/internal/db/db.go:66
+[error] failed to initialize database, got error dial tcp: lookup db on 127.0.0.11:53: no such host
+2026/05/31 16:17:33 /src/internal/db/db.go:66
+[error] failed to initialize database, got error dial tcp: lookup db on 127.0.0.11:53: no such host
+2026/05/31 16:17:38 /src/internal/db/db.go:66
+[error] failed to initialize database, got error dial tcp: lookup db on 127.0.0.11:53: no such host
+2026/05/31 16:17:44 /src/internal/db/db.go:66
+[error] failed to initialize database, got error dial tcp: lookup db on 127.0.0.11:53: no such host
+2026/05/31 16:17:49 /src/internal/db/db.go:66
+[error] failed to initialize database, got error dial tcp: lookup db on 127.0.0.11:53: no such host
+2026/05/31 16:17:54 /src/internal/db/db.go:66
+[error] failed to initialize database, got error dial tcp: lookup db on 127.0.0.11:53: no such host
+2026/05/31 16:18:00 /src/internal/db/db.go:66
+[error] failed to initialize database, got error dial tcp: lookup db on 127.0.0.11:53: no such host
+2026/05/31 16:18:05 /src/internal/db/db.go:66
+[error] failed to initialize database, got error dial tcp: lookup db on 127.0.0.11:53: no such host
+2026/05/31 16:18:11 /src/internal/db/db.go:66
+[error] failed to initialize database, got error dial tcp: lookup db on 127.0.0.11:53: no such host
+2026/05/31 16:18:16 /src/internal/db/db.go:66
+[error] failed to initialize database, got error dial tcp: lookup db on 127.0.0.11:53: no such host
+2026/05/31 16:18:22 /src/internal/db/db.go:66
+[error] failed to initialize database, got error dial tcp: lookup db on 127.0.0.11:53: no such host
+2026/05/31 16:18:27 /src/internal/db/db.go:66
+[error] failed to initialize database, got error dial tcp: lookup db on 127.0.0.11:53: no such host
+2026/05/31 16:18:32 /src/internal/db/db.go:66
+[error] failed to initialize database, got error dial tcp: lookup db on 127.0.0.11:53: no such host
+2026/05/31 16:18:38 /src/internal/db/db.go:66
+[error] failed to initialize database, got error dial tcp: lookup db on 127.0.0.11:53: no such host
+2026/05/31 16:18:43 /src/internal/db/db.go:66
+[error] failed to initialize database, got error dial tcp: lookup db on 127.0.0.11:53: no such host
+2026/05/31 16:18:48 /src/internal/db/db.go:66
+[error] failed to initialize database, got error dial tcp: lookup db on 127.0.0.11:53: no such host
+2026/05/31 16:18:54 /src/internal/db/db.go:66
+[error] failed to initialize database, got error dial tcp: lookup db on 127.0.0.11:53: no such host
+2026/05/31 16:18:59 /src/internal/db/db.go:66
+[error] failed to initialize database, got error dial tcp: lookup db on 127.0.0.11:53: no such host
+2026/05/31 16:19:04 /src/internal/db/db.go:66
+[error] failed to initialize database, got error dial tcp: lookup db on 127.0.0.11:53: no such host
+2026/05/31 16:19:10 /src/internal/db/db.go:66
+[error] failed to initialize database, got error dial tcp: lookup db on 127.0.0.11:53: no such host
+2026/05/31 16:19:15 /src/internal/db/db.go:66
+[error] failed to initialize database, got error dial tcp: lookup db on 127.0.0.11:53: no such host
+2026/05/31 16:19:20 /src/internal/db/db.go:66
+[error] failed to initialize database, got error dial tcp: lookup db on 127.0.0.11:53: no such host
+2026/05/31 16:19:26 /src/internal/db/db.go:66
+[error] failed to initialize database, got error dial tcp: lookup db on 127.0.0.11:53: no such host
+2026/05/31 16:19:32 /src/internal/db/db.go:66
+[error] failed to initialize database, got error dial tcp: lookup db on 127.0.0.11:53: no such host
+2026/05/31 16:19:37 /src/internal/db/db.go:66
+[error] failed to initialize database, got error dial tcp: lookup db on 127.0.0.11:53: no such host
+2026/05/31 16:19:42 /src/internal/db/db.go:66
+[error] failed to initialize database, got error dial tcp: lookup db on 127.0.0.11:53: no such host
+2026/05/31 16:19:48 /src/internal/db/db.go:66
+[error] failed to initialize database, got error dial tcp: lookup db on 127.0.0.11:53: no such host
+2026/05/31 16:19:53 /src/internal/db/db.go:66
+[error] failed to initialize database, got error dial tcp: lookup db on 127.0.0.11:53: no such host
+2026/05/31 16:19:58 /src/internal/db/db.go:66
+[error] failed to initialize database, got error dial tcp: lookup db on 127.0.0.11:53: no such host
+2026/05/31 16:20:04 /src/internal/db/db.go:66
+[error] failed to initialize database, got error dial tcp: lookup db on 127.0.0.11:53: no such host
+2026/05/31 16:20:09 /src/internal/db/db.go:66
+[error] failed to initialize database, got error dial tcp: lookup db on 127.0.0.11:53: no such host
+2026/05/31 16:20:14 /src/internal/db/db.go:66
+[error] failed to initialize database, got error dial tcp: lookup db on 127.0.0.11:53: no such host
+2026/05/31 16:20:20 /src/internal/db/db.go:66
+[error] failed to initialize database, got error dial tcp: lookup db on 127.0.0.11:53: no such host
+2026/05/31 16:20:25 /src/internal/db/db.go:66
+[error] failed to initialize database, got error dial tcp: lookup db on 127.0.0.11:53: no such host
+2026/05/31 16:20:30 /src/internal/db/db.go:66
+[error] failed to initialize database, got error dial tcp: lookup db on 127.0.0.11:53: no such host
+2026/05/31 16:20:36 /src/internal/db/db.go:66
+[error] failed to initialize database, got error dial tcp: lookup db on 127.0.0.11:53: no such host
+2026/05/31 16:20:41 /src/internal/db/db.go:66
+[error] failed to initialize database, got error dial tcp: lookup db on 127.0.0.11:53: no such host
+2026/05/31 16:20:46 /src/internal/db/db.go:66
+[error] failed to initialize database, got error dial tcp: lookup db on 127.0.0.11:53: no such host
+2026/05/31 16:20:52 /src/internal/db/db.go:66
+[error] failed to initialize database, got error dial tcp: lookup db on 127.0.0.11:53: no such host
+2026/05/31 16:20:58 /src/internal/db/db.go:66
+[error] failed to initialize database, got error dial tcp: lookup db on 127.0.0.11:53: no such host
+2026/05/31 16:21:03 /src/internal/db/db.go:66
+[error] failed to initialize database, got error dial tcp: lookup db on 127.0.0.11:53: no such host
+2026/05/31 16:21:09 /src/internal/db/db.go:66
+[error] failed to initialize database, got error dial tcp: lookup db on 127.0.0.11:53: no such host
+2026/05/31 16:21:14 /src/internal/db/db.go:66
+[error] failed to initialize database, got error dial tcp: lookup db on 127.0.0.11:53: no such host
+2026/05/31 16:21:19 /src/internal/db/db.go:66
+[error] failed to initialize database, got error dial tcp: lookup db on 127.0.0.11:53: no such host
+2026/05/31 16:21:25 /src/internal/db/db.go:66
+[error] failed to initialize database, got error dial tcp: lookup db on 127.0.0.11:53: no such host
+2026/05/31 16:21:30 /src/internal/db/db.go:66
+[error] failed to initialize database, got error dial tcp: lookup db on 127.0.0.11:53: no such host
+2026/05/31 16:21:35 /src/internal/db/db.go:66
+[error] failed to initialize database, got error dial tcp: lookup db on 127.0.0.11:53: no such host
+2026/05/31 16:21:41 /src/internal/db/db.go:66
+[error] failed to initialize database, got error dial tcp: lookup db on 127.0.0.11:53: no such host
+2026/05/31 16:21:46 /src/internal/db/db.go:66
+[error] failed to initialize database, got error dial tcp: lookup db on 127.0.0.11:53: no such host
+2026/05/31 16:21:51 /src/internal/db/db.go:66
+[error] failed to initialize database, got error dial tcp: lookup db on 127.0.0.11:53: no such host
+2026/05/31 16:21:57 /src/internal/db/db.go:66
+[error] failed to initialize database, got error dial tcp: lookup db on 127.0.0.11:53: no such host
+2026/05/31 16:22:02 /src/internal/db/db.go:66
+[error] failed to initialize database, got error dial tcp: lookup db on 127.0.0.11:53: no such host
+2026/05/31 16:22:07 /src/internal/db/db.go:66
+[error] failed to initialize database, got error dial tcp: lookup db on 127.0.0.11:53: no such host
+2026/05/31 16:22:13 /src/internal/db/db.go:66
+[error] failed to initialize database, got error dial tcp: lookup db on 127.0.0.11:53: no such host
+2026/05/31 16:22:18 /src/internal/db/db.go:66
+[error] failed to initialize database, got error dial tcp: lookup db on 127.0.0.11:53: no such host
+2026/05/31 16:22:24 /src/internal/db/db.go:66
+[error] failed to initialize database, got error dial tcp: lookup db on 127.0.0.11:53: no such host
+2026/05/31 16:22:29 /src/internal/db/db.go:66
+[error] failed to initialize database, got error dial tcp: lookup db on 127.0.0.11:53: no such host
+2026/05/31 16:22:34 /src/internal/db/db.go:66
+[error] failed to initialize database, got error dial tcp: lookup db on 127.0.0.11:53: no such host
+2026/05/31 16:22:40 /src/internal/db/db.go:66
+[error] failed to initialize database, got error dial tcp: lookup db on 127.0.0.11:53: no such host
+2026/05/31 16:22:45 /src/internal/db/db.go:66
+[error] failed to initialize database, got error dial tcp: lookup db on 127.0.0.11:53: no such host
+2026/05/31 16:22:50 /src/internal/db/db.go:66
+[error] failed to initialize database, got error dial tcp: lookup db on 127.0.0.11:53: no such host
+2026/05/31 16:22:56 /src/internal/db/db.go:66
+[error] failed to initialize database, got error dial tcp: lookup db on 127.0.0.11:53: no such host
+2026/05/31 16:23:01 /src/internal/db/db.go:66
+[error] failed to initialize database, got error dial tcp: lookup db on 127.0.0.11:53: no such host
+2026/05/31 16:23:06 /src/internal/db/db.go:66
+[error] failed to initialize database, got error dial tcp: lookup db on 127.0.0.11:53: no such host
+2026/05/31 16:23:12 /src/internal/db/db.go:66
+[error] failed to initialize database, got error dial tcp: lookup db on 127.0.0.11:53: no such host
+2026/05/31 16:23:17 /src/internal/db/db.go:66
+[error] failed to initialize database, got error dial tcp: lookup db on 127.0.0.11:53: no such host
+2026/05/31 16:23:22 /src/internal/db/db.go:66
+[error] failed to initialize database, got error dial tcp: lookup db on 127.0.0.11:53: no such host
+2026/05/31 16:23:28 /src/internal/db/db.go:66
+[error] failed to initialize database, got error dial tcp: lookup db on 127.0.0.11:53: no such host
+2026/05/31 16:23:34 /src/internal/db/db.go:66
+[error] failed to initialize database, got error dial tcp: lookup db on 127.0.0.11:53: no such host
+2026/05/31 16:23:39 /src/internal/db/db.go:66
+[error] failed to initialize database, got error dial tcp: lookup db on 127.0.0.11:53: no such host
+2026/05/31 16:23:44 /src/internal/db/db.go:66
+[error] failed to initialize database, got error dial tcp: lookup db on 127.0.0.11:53: no such host
+2026/05/31 16:23:50 /src/internal/db/db.go:66
+[error] failed to initialize database, got error dial tcp: lookup db on 127.0.0.11:53: no such host
+2026/05/31 16:23:55 /src/internal/db/db.go:66
+[error] failed to initialize database, got error dial tcp: lookup db on 127.0.0.11:53: no such host
+2026/05/31 16:24:00 /src/internal/db/db.go:66
+[error] failed to initialize database, got error dial tcp: lookup db on 127.0.0.11:53: no such host
+2026/05/31 16:24:06 /src/internal/db/db.go:66
+[error] failed to initialize database, got error dial tcp: lookup db on 127.0.0.11:53: no such host
+2026/05/31 16:24:11 /src/internal/db/db.go:66
+[error] failed to initialize database, got error dial tcp: lookup db on 127.0.0.11:53: no such host
+2026/05/31 16:24:16 /src/internal/db/db.go:66
+[error] failed to initialize database, got error dial tcp: lookup db on 127.0.0.11:53: no such host
+2026/05/31 16:24:22 /src/internal/db/db.go:66
+[error] failed to initialize database, got error dial tcp: lookup db on 127.0.0.11:53: no such host
+2026/05/31 16:24:27 /src/internal/db/db.go:66
+[error] failed to initialize database, got error dial tcp: lookup db on 127.0.0.11:53: no such host
+2026/05/31 16:24:32 /src/internal/db/db.go:66
+[error] failed to initialize database, got error dial tcp: lookup db on 127.0.0.11:53: no such host
+2026/05/31 16:24:38 /src/internal/db/db.go:66
+[error] failed to initialize database, got error dial tcp: lookup db on 127.0.0.11:53: no such host
+2026/05/31 16:24:43 /src/internal/db/db.go:66
+[error] failed to initialize database, got error dial tcp: lookup db on 127.0.0.11:53: no such host
+2026/05/31 16:24:48 /src/internal/db/db.go:66
+[error] failed to initialize database, got error dial tcp: lookup db on 127.0.0.11:53: no such host
+2026/05/31 16:24:54 /src/internal/db/db.go:66
+[error] failed to initialize database, got error dial tcp: lookup db on 127.0.0.11:53: no such host
+2026/05/31 16:25:00 /src/internal/db/db.go:66
+[error] failed to initialize database, got error dial tcp: lookup db on 127.0.0.11:53: no such host
+2026/05/31 16:25:05 /src/internal/db/db.go:66
+[error] failed to initialize database, got error dial tcp: lookup db on 127.0.0.11:53: no such host
+2026/05/31 16:25:10 /src/internal/db/db.go:66
+[error] failed to initialize database, got error dial tcp: lookup db on 127.0.0.11:53: no such host
+2026/05/31 16:25:16 /src/internal/db/db.go:66
+[error] failed to initialize database, got error dial tcp: lookup db on 127.0.0.11:53: no such host
+2026/05/31 16:25:21 /src/internal/db/db.go:66
+[error] failed to initialize database, got error dial tcp: lookup db on 127.0.0.11:53: no such host
+2026/05/31 16:25:26 /src/internal/db/db.go:66
+[error] failed to initialize database, got error dial tcp: lookup db on 127.0.0.11:53: no such host
+2026/05/31 16:25:32 /src/internal/db/db.go:66
+[error] failed to initialize database, got error dial tcp: lookup db on 127.0.0.11:53: no such host
+2026/05/31 16:25:37 /src/internal/db/db.go:66
+[error] failed to initialize database, got error dial tcp: lookup db on 127.0.0.11:53: no such host
+2026/05/31 16:25:42 /src/internal/db/db.go:66
+[error] failed to initialize database, got error dial tcp: lookup db on 127.0.0.11:53: no such host
+2026/05/31 16:25:48 /src/internal/db/db.go:66
+[error] failed to initialize database, got error dial tcp: lookup db on 127.0.0.11:53: no such host
+2026/05/31 16:25:53 /src/internal/db/db.go:66
+[error] failed to initialize database, got error dial tcp: lookup db on 127.0.0.11:53: no such host
+2026/05/31 16:25:58 /src/internal/db/db.go:66
+[error] failed to initialize database, got error dial tcp: lookup db on 127.0.0.11:53: no such host
+2026/05/31 16:26:04 /src/internal/db/db.go:66
+[error] failed to initialize database, got error dial tcp: lookup db on 127.0.0.11:53: no such host
+2026/05/31 16:26:09 /src/internal/db/db.go:66
+[error] failed to initialize database, got error dial tcp: lookup db on 127.0.0.11:53: no such host
+2026/05/31 16:26:15 /src/internal/db/db.go:66
+[error] failed to initialize database, got error dial tcp: lookup db on 127.0.0.11:53: no such host
+2026/05/31 16:26:20 /src/internal/db/db.go:66
+[error] failed to initialize database, got error dial tcp: lookup db on 127.0.0.11:53: no such host
+2026/05/31 16:26:26 /src/internal/db/db.go:66
+[error] failed to initialize database, got error dial tcp: lookup db on 127.0.0.11:53: no such host
+2026/05/31 16:26:31 /src/internal/db/db.go:66
+[error] failed to initialize database, got error dial tcp: lookup db on 127.0.0.11:53: no such host
+2026/05/31 16:26:36 /src/internal/db/db.go:66
+[error] failed to initialize database, got error dial tcp: lookup db on 127.0.0.11:53: no such host
+2026/05/31 16:26:42 /src/internal/db/db.go:66
+[error] failed to initialize database, got error dial tcp: lookup db on 127.0.0.11:53: no such host
+2026/05/31 16:26:47 /src/internal/db/db.go:66
+[error] failed to initialize database, got error dial tcp: lookup db on 127.0.0.11:53: no such host
+2026/05/31 16:26:52 /src/internal/db/db.go:66
+[error] failed to initialize database, got error dial tcp: lookup db on 127.0.0.11:53: no such host
+2026/05/31 16:26:58 /src/internal/db/db.go:66
+[error] failed to initialize database, got error dial tcp: lookup db on 127.0.0.11:53: no such host
+2026/05/31 16:27:03 /src/internal/db/db.go:66
+[error] failed to initialize database, got error dial tcp: lookup db on 127.0.0.11:53: no such host
+2026/05/31 16:27:08 /src/internal/db/db.go:66
+[error] failed to initialize database, got error dial tcp: lookup db on 127.0.0.11:53: no such host
+2026/05/31 16:27:14 /src/internal/db/db.go:66
+[error] failed to initialize database, got error dial tcp: lookup db on 127.0.0.11:53: no such host
+2026/05/31 16:27:19 /src/internal/db/db.go:66
+[error] failed to initialize database, got error dial tcp: lookup db on 127.0.0.11:53: no such host
+2026/05/31 16:27:24 /src/internal/db/db.go:66
+[error] failed to initialize database, got error dial tcp: lookup db on 127.0.0.11:53: no such host
+2026/05/31 16:27:30 /src/internal/db/db.go:66
+[error] failed to initialize database, got error dial tcp: lookup db on 127.0.0.11:53: no such host
+2026/05/31 16:27:36 /src/internal/db/db.go:66
+[error] failed to initialize database, got error dial tcp: lookup db on 127.0.0.11:53: no such host
+2026/05/31 16:27:41 /src/internal/db/db.go:66
+[error] failed to initialize database, got error dial tcp: lookup db on 127.0.0.11:53: no such host
+2026/05/31 16:27:46 /src/internal/db/db.go:66
+[error] failed to initialize database, got error dial tcp: lookup db on 127.0.0.11:53: no such host
+2026/05/31 16:27:52 /src/internal/db/db.go:66
+[error] failed to initialize database, got error dial tcp: lookup db on 127.0.0.11:53: no such host
+2026/05/31 16:27:57 /src/internal/db/db.go:66
+[error] failed to initialize database, got error dial tcp: lookup db on 127.0.0.11:53: no such host
+2026/05/31 16:28:02 /src/internal/db/db.go:66
+[error] failed to initialize database, got error dial tcp: lookup db on 127.0.0.11:53: no such host
+2026/05/31 16:28:08 /src/internal/db/db.go:66
+[error] failed to initialize database, got error dial tcp: lookup db on 127.0.0.11:53: no such host
+2026/05/31 16:28:13 /src/internal/db/db.go:66
+[error] failed to initialize database, got error dial tcp: lookup db on 127.0.0.11:53: no such host
+2026/05/31 16:28:18 /src/internal/db/db.go:66
+[error] failed to initialize database, got error dial tcp: lookup db on 127.0.0.11:53: no such host
+2026/05/31 16:28:24 /src/internal/db/db.go:66
+[error] failed to initialize database, got error dial tcp: lookup db on 127.0.0.11:53: no such host
+2026/05/31 16:28:29 /src/internal/db/db.go:66
+[error] failed to initialize database, got error dial tcp: lookup db on 127.0.0.11:53: no such host
+2026/05/31 16:28:34 /src/internal/db/db.go:66
+[error] failed to initialize database, got error dial tcp: lookup db on 127.0.0.11:53: no such host
+2026/05/31 16:28:40 /src/internal/db/db.go:66
+[error] failed to initialize database, got error dial tcp: lookup db on 127.0.0.11:53: no such host
+2026/05/31 16:28:45 /src/internal/db/db.go:66
+[error] failed to initialize database, got error dial tcp: lookup db on 127.0.0.11:53: no such host
+2026/05/31 16:28:50 /src/internal/db/db.go:66
+[error] failed to initialize database, got error dial tcp: lookup db on 127.0.0.11:53: no such host
+2026/05/31 16:28:56 /src/internal/db/db.go:66
+[error] failed to initialize database, got error dial tcp: lookup db on 127.0.0.11:53: no such host
+2026/05/31 16:29:02 /src/internal/db/db.go:66
+[error] failed to initialize database, got error dial tcp: lookup db on 127.0.0.11:53: no such host
+2026/05/31 16:29:07 /src/internal/db/db.go:66
+[error] failed to initialize database, got error dial tcp: lookup db on 127.0.0.11:53: no such host
+2026/05/31 16:29:12 /src/internal/db/db.go:66
+[error] failed to initialize database, got error dial tcp: lookup db on 127.0.0.11:53: no such host
+2026/05/31 16:29:18 /src/internal/db/db.go:66
+[error] failed to initialize database, got error dial tcp: lookup db on 127.0.0.11:53: no such host
+2026/05/31 16:29:23 /src/internal/db/db.go:66
+[error] failed to initialize database, got error dial tcp: lookup db on 127.0.0.11:53: no such host
+2026/05/31 16:29:29 /src/internal/db/db.go:66
+[error] failed to initialize database, got error dial tcp: lookup db on 127.0.0.11:53: no such host
+2026/05/31 16:29:34 /src/internal/db/db.go:66
+[error] failed to initialize database, got error dial tcp: lookup db on 127.0.0.11:53: no such host
+2026/05/31 16:29:39 /src/internal/db/db.go:66
+[error] failed to initialize database, got error dial tcp: lookup db on 127.0.0.11:53: no such host
+2026/05/31 16:29:45 /src/internal/db/db.go:66
+[error] failed to initialize database, got error dial tcp: lookup db on 127.0.0.11:53: no such host
+2026/05/31 16:29:50 /src/internal/db/db.go:66
+[error] failed to initialize database, got error dial tcp: lookup db on 127.0.0.11:53: no such host
+2026/05/31 16:29:55 /src/internal/db/db.go:66
+[error] failed to initialize database, got error dial tcp: lookup db on 127.0.0.11:53: no such host
+2026/05/31 16:30:01 /src/internal/db/db.go:66
+[error] failed to initialize database, got error dial tcp: lookup db on 127.0.0.11:53: no such host
+2026/05/31 16:30:06 /src/internal/db/db.go:66
+[error] failed to initialize database, got error dial tcp: lookup db on 127.0.0.11:53: no such host
+2026/05/31 16:30:11 /src/internal/db/db.go:66
+[error] failed to initialize database, got error dial tcp: lookup db on 127.0.0.11:53: no such host
+2026/05/31 16:30:17 /src/internal/db/db.go:66
+[error] failed to initialize database, got error dial tcp: lookup db on 127.0.0.11:53: no such host
+2026/05/31 16:30:23 /src/internal/db/db.go:66
+[error] failed to initialize database, got error dial tcp: lookup db on 127.0.0.11:53: no such host
+2026/05/31 16:30:28 /src/internal/db/db.go:66
+[error] failed to initialize database, got error dial tcp: lookup db on 127.0.0.11:53: no such host
+2026/05/31 16:30:33 /src/internal/db/db.go:66
+[error] failed to initialize database, got error dial tcp: lookup db on 127.0.0.11:53: no such host
+2026/05/31 16:30:39 /src/internal/db/db.go:66
+[error] failed to initialize database, got error dial tcp: lookup db on 127.0.0.11:53: no such host
+2026/05/31 16:30:44 /src/internal/db/db.go:66
+[error] failed to initialize database, got error dial tcp: lookup db on 127.0.0.11:53: no such host
+2026/05/31 16:30:49 /src/internal/db/db.go:66
+[error] failed to initialize database, got error dial tcp: lookup db on 127.0.0.11:53: no such host
+2026/05/31 16:30:55 /src/internal/db/db.go:66
+[error] failed to initialize database, got error dial tcp: lookup db on 127.0.0.11:53: no such host
+2026/05/31 16:31:00 /src/internal/db/db.go:66
+[error] failed to initialize database, got error dial tcp: lookup db on 127.0.0.11:53: no such host
+2026/05/31 16:31:05 /src/internal/db/db.go:66
+[error] failed to initialize database, got error dial tcp: lookup db on 127.0.0.11:53: no such host
+2026/05/31 16:31:11 /src/internal/db/db.go:66
+[error] failed to initialize database, got error dial tcp: lookup db on 127.0.0.11:53: no such host
+2026/05/31 16:31:16 /src/internal/db/db.go:66
+[error] failed to initialize database, got error dial tcp: lookup db on 127.0.0.11:53: no such host
+2026/05/31 16:31:21 /src/internal/db/db.go:66
+[error] failed to initialize database, got error dial tcp: lookup db on 127.0.0.11:53: no such host
+2026/05/31 16:31:27 /src/internal/db/db.go:66
+[error] failed to initialize database, got error dial tcp: lookup db on 127.0.0.11:53: no such host
+2026/05/31 16:31:32 /src/internal/db/db.go:66
+[error] failed to initialize database, got error dial tcp: lookup db on 127.0.0.11:53: no such host
+2026/05/31 16:31:38 /src/internal/db/db.go:66
+[error] failed to initialize database, got error dial tcp: lookup db on 127.0.0.11:53: no such host
+2026/05/31 16:31:43 /src/internal/db/db.go:66
+[error] failed to initialize database, got error dial tcp: lookup db on 127.0.0.11:53: no such host
+2026/05/31 16:31:49 /src/internal/db/db.go:66
+[error] failed to initialize database, got error dial tcp: lookup db on 127.0.0.11:53: no such host
+2026/05/31 16:31:54 /src/internal/db/db.go:66
+[error] failed to initialize database, got error dial tcp: lookup db on 127.0.0.11:53: no such host
+2026/05/31 16:31:59 /src/internal/db/db.go:66
+[error] failed to initialize database, got error dial tcp: lookup db on 127.0.0.11:53: no such host
+2026/05/31 16:32:04 /src/internal/db/db.go:66
+[error] failed to initialize database, got error dial tcp: lookup db on 127.0.0.11:53: no such host
+2026/05/31 16:32:10 /src/internal/db/db.go:66
+[error] failed to initialize database, got error dial tcp: lookup db on 127.0.0.11:53: no such host
+2026/05/31 16:32:12 /src/internal/db/db.go:66
+[error] failed to initialize database, got error dial tcp 172.19.0.3:3306: connect: connection refused
+2026/05/31 16:32:14 /src/internal/db/db.go:66
+[error] failed to initialize database, got error dial tcp 172.19.0.3:3306: connect: connection refused
+2026/05/31 16:32:16 /src/internal/db/db.go:90
+[0.881ms] [rows:-] SELECT DATABASE()
+2026/05/31 16:32:16 /src/internal/db/db.go:90
+[8.934ms] [rows:1] SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'ai_forge%' ORDER BY SCHEMA_NAME='ai_forge' DESC,SCHEMA_NAME limit 1
+2026/05/31 16:32:16 /src/internal/db/db.go:90
+[3.953ms] [rows:-] SELECT count(*) FROM information_schema.tables WHERE table_schema = 'ai_forge' AND table_name = 'users' AND table_type = 'BASE TABLE'
+2026/05/31 16:32:16 /src/internal/db/db.go:90
+[0.472ms] [rows:-] SELECT DATABASE()
+2026/05/31 16:32:16 /src/internal/db/db.go:90
+[1.287ms] [rows:1] SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'ai_forge%' ORDER BY SCHEMA_NAME='ai_forge' DESC,SCHEMA_NAME limit 1
+2026/05/31 16:32:16 /src/internal/db/db.go:90
+[7.345ms] [rows:-] SELECT * FROM `users` LIMIT 1
+2026/05/31 16:32:16 /src/internal/db/db.go:90
+[6.014ms] [rows:-] SELECT column_name, column_default, is_nullable = 'YES', data_type, character_maximum_length, column_type, column_key, extra, column_comment, numeric_precision, numeric_scale , datetime_precision FROM information_schema.columns WHERE table_schema = 'ai_forge' AND table_name = 'users' ORDER BY ORDINAL_POSITION
+2026/05/31 16:32:16 /src/internal/db/db.go:90
+[0.294ms] [rows:-] SELECT DATABASE()
+2026/05/31 16:32:16 /src/internal/db/db.go:90
+[1.101ms] [rows:1] SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'ai_forge%' ORDER BY SCHEMA_NAME='ai_forge' DESC,SCHEMA_NAME limit 1
+2026/05/31 16:32:16 /src/internal/db/db.go:90
+[2.310ms] [rows:-] SELECT count(*) FROM information_schema.statistics WHERE table_schema = 'ai_forge' AND table_name = 'users' AND index_name = 'idx_users_email'
+2026/05/31 16:35:15 /src/internal/db/db.go:91
+[0.387ms] [rows:-] SELECT DATABASE()
+2026/05/31 16:35:15 /src/internal/db/db.go:91
+[2.002ms] [rows:1] SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'ai_forge%' ORDER BY SCHEMA_NAME='ai_forge' DESC,SCHEMA_NAME limit 1
+2026/05/31 16:35:15 /src/internal/db/db.go:91
+[2.039ms] [rows:-] SELECT count(*) FROM information_schema.tables WHERE table_schema = 'ai_forge' AND table_name = 'users' AND table_type = 'BASE TABLE'
+2026/05/31 16:35:15 /src/internal/db/db.go:91
+[0.312ms] [rows:-] SELECT DATABASE()
+2026/05/31 16:35:15 /src/internal/db/db.go:91
+[1.602ms] [rows:1] SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'ai_forge%' ORDER BY SCHEMA_NAME='ai_forge' DESC,SCHEMA_NAME limit 1
+2026/05/31 16:35:15 /src/internal/db/db.go:91
+[0.762ms] [rows:-] SELECT * FROM `users` LIMIT 1
+2026/05/31 16:35:15 /src/internal/db/db.go:91
+[1.973ms] [rows:-] SELECT column_name, column_default, is_nullable = 'YES', data_type, character_maximum_length, column_type, column_key, extra, column_comment, numeric_precision, numeric_scale , datetime_precision FROM information_schema.columns WHERE table_schema = 'ai_forge' AND table_name = 'users' ORDER BY ORDINAL_POSITION
+2026/05/31 16:35:15 /src/internal/db/db.go:91
+[0.332ms] [rows:-] SELECT DATABASE()
+2026/05/31 16:35:15 /src/internal/db/db.go:91
+[1.023ms] [rows:1] SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'ai_forge%' ORDER BY SCHEMA_NAME='ai_forge' DESC,SCHEMA_NAME limit 1
+2026/05/31 16:35:15 /src/internal/db/db.go:91
+[1.920ms] [rows:-] SELECT count(*) FROM information_schema.statistics WHERE table_schema = 'ai_forge' AND table_name = 'users' AND index_name = 'idx_users_email'
+2026/05/31 17:07:54 /src/internal/db/db.go:66
+[error] failed to initialize database, got error dial tcp: lookup db on 127.0.0.11:53: no such host
+2026/05/31 17:08:00 /src/internal/db/db.go:66
+[error] failed to initialize database, got error dial tcp: lookup db on 127.0.0.11:53: no such host
+2026/05/31 17:08:05 /src/internal/db/db.go:66
+[error] failed to initialize database, got error dial tcp: lookup db on 127.0.0.11:53: no such host
+2026/05/31 17:08:10 /src/internal/db/db.go:66
+[error] failed to initialize database, got error dial tcp: lookup db on 127.0.0.11:53: no such host
+2026/05/31 17:08:16 /src/internal/db/db.go:66
+[error] failed to initialize database, got error dial tcp: lookup db on 127.0.0.11:53: no such host
+2026/05/31 17:08:21 /src/internal/db/db.go:66
+[error] failed to initialize database, got error dial tcp: lookup db on 127.0.0.11:53: no such host
+2026/05/31 17:08:26 /src/internal/db/db.go:66
+[error] failed to initialize database, got error dial tcp: lookup db on 127.0.0.11:53: no such host
+2026/05/31 17:08:32 /src/internal/db/db.go:66
+[error] failed to initialize database, got error dial tcp: lookup db on 127.0.0.11:53: no such host
+2026/05/31 17:08:37 /src/internal/db/db.go:66
+[error] failed to initialize database, got error dial tcp: lookup db on 127.0.0.11:53: no such host
+2026/05/31 17:08:42 /src/internal/db/db.go:66
+[error] failed to initialize database, got error dial tcp: lookup db on 127.0.0.11:53: no such host
+2026/05/31 17:08:48 /src/internal/db/db.go:66
+[error] failed to initialize database, got error dial tcp: lookup db on 127.0.0.11:53: no such host
+2026/05/31 17:08:53 /src/internal/db/db.go:66
+[error] failed to initialize database, got error dial tcp: lookup db on 127.0.0.11:53: no such host
+2026/05/31 17:08:58 /src/internal/db/db.go:66
+[error] failed to initialize database, got error dial tcp: lookup db on 127.0.0.11:53: no such host
+2026/05/31 17:09:04 /src/internal/db/db.go:66
+[error] failed to initialize database, got error dial tcp: lookup db on 127.0.0.11:53: no such host
+2026/05/31 17:09:09 /src/internal/db/db.go:66
+[error] failed to initialize database, got error dial tcp: lookup db on 127.0.0.11:53: no such host
+2026/05/31 17:09:14 /src/internal/db/db.go:66
+[error] failed to initialize database, got error dial tcp: lookup db on 127.0.0.11:53: no such host
+2026/05/31 17:09:19 /src/internal/db/db.go:66
+[error] failed to initialize database, got error dial tcp: lookup db on 127.0.0.11:53: no such host
+2026/05/31 17:09:25 /src/internal/db/db.go:66
+[error] failed to initialize database, got error dial tcp: lookup db on 127.0.0.11:53: no such host
+2026/05/31 17:09:30 /src/internal/db/db.go:66
+[error] failed to initialize database, got error dial tcp: lookup db on 127.0.0.11:53: no such host
+2026/05/31 17:09:35 /src/internal/db/db.go:66
+[error] failed to initialize database, got error dial tcp: lookup db on 127.0.0.11:53: no such host
+2026/05/31 17:09:41 /src/internal/db/db.go:66
+[error] failed to initialize database, got error dial tcp: lookup db on 127.0.0.11:53: no such host
+2026/05/31 17:09:46 /src/internal/db/db.go:66
+[error] failed to initialize database, got error dial tcp: lookup db on 127.0.0.11:53: no such host
+2026/05/31 17:09:51 /src/internal/db/db.go:66
+[error] failed to initialize database, got error dial tcp: lookup db on 127.0.0.11:53: no such host
+2026/05/31 17:09:57 /src/internal/db/db.go:66
+[error] failed to initialize database, got error dial tcp: lookup db on 127.0.0.11:53: no such host
+2026/05/31 17:10:02 /src/internal/db/db.go:66
+[error] failed to initialize database, got error dial tcp: lookup db on 127.0.0.11:53: no such host
+2026/05/31 17:10:07 /src/internal/db/db.go:66
+[error] failed to initialize database, got error dial tcp: lookup db on 127.0.0.11:53: no such host
+2026/05/31 17:10:13 /src/internal/db/db.go:66
+[error] failed to initialize database, got error dial tcp: lookup db on 127.0.0.11:53: no such host
+2026/05/31 17:10:18 /src/internal/db/db.go:66
+[error] failed to initialize database, got error dial tcp: lookup db on 127.0.0.11:53: no such host
+2026/05/31 17:10:23 /src/internal/db/db.go:66
+[error] failed to initialize database, got error dial tcp: lookup db on 127.0.0.11:53: no such host
+2026/05/31 17:10:28 /src/internal/db/db.go:66
+[error] failed to initialize database, got error dial tcp: lookup db on 127.0.0.11:53: no such host
+2026/05/31 17:10:34 /src/internal/db/db.go:66
+[error] failed to initialize database, got error dial tcp: lookup db on 127.0.0.11:53: no such host
+2026/05/31 17:10:39 /src/internal/db/db.go:66
+[error] failed to initialize database, got error dial tcp: lookup db on 127.0.0.11:53: no such host
+2026/05/31 17:10:44 /src/internal/db/db.go:66
+[error] failed to initialize database, got error dial tcp: lookup db on 127.0.0.11:53: no such host
+2026/05/31 17:10:50 /src/internal/db/db.go:66
+[error] failed to initialize database, got error dial tcp: lookup db on 127.0.0.11:53: no such host
+2026/05/31 17:10:55 /src/internal/db/db.go:66
+[error] failed to initialize database, got error dial tcp: lookup db on 127.0.0.11:53: no such host
+2026/05/31 17:11:00 /src/internal/db/db.go:66
+[error] failed to initialize database, got error dial tcp: lookup db on 127.0.0.11:53: no such host
+2026/05/31 17:11:06 /src/internal/db/db.go:66
+[error] failed to initialize database, got error dial tcp: lookup db on 127.0.0.11:53: no such host
+2026/05/31 17:11:11 /src/internal/db/db.go:66
+[error] failed to initialize database, got error dial tcp: lookup db on 127.0.0.11:53: no such host
+2026/05/31 17:11:16 /src/internal/db/db.go:66
+[error] failed to initialize database, got error dial tcp: lookup db on 127.0.0.11:53: no such host
+2026/05/31 17:11:22 /src/internal/db/db.go:66
+[error] failed to initialize database, got error dial tcp: lookup db on 127.0.0.11:53: no such host
+2026/05/31 17:11:27 /src/internal/db/db.go:66
+[error] failed to initialize database, got error dial tcp: lookup db on 127.0.0.11:53: no such host
+2026/05/31 17:11:32 /src/internal/db/db.go:66
+[error] failed to initialize database, got error dial tcp: lookup db on 127.0.0.11:53: no such host
+2026/05/31 17:11:38 /src/internal/db/db.go:66
+[error] failed to initialize database, got error dial tcp: lookup db on 127.0.0.11:53: no such host
+2026/05/31 17:11:43 /src/internal/db/db.go:66
+[error] failed to initialize database, got error dial tcp: lookup db on 127.0.0.11:53: no such host
+2026/05/31 17:11:48 /src/internal/db/db.go:66
+[error] failed to initialize database, got error dial tcp: lookup db on 127.0.0.11:53: no such host
+2026/05/31 17:11:54 /src/internal/db/db.go:66
+[error] failed to initialize database, got error dial tcp: lookup db on 127.0.0.11:53: no such host
+2026/05/31 17:11:59 /src/internal/db/db.go:66
+[error] failed to initialize database, got error dial tcp: lookup db on 127.0.0.11:53: no such host
+2026/05/31 17:12:04 /src/internal/db/db.go:66
+[error] failed to initialize database, got error dial tcp: lookup db on 127.0.0.11:53: no such host
+2026/05/31 17:12:09 /src/internal/db/db.go:66
+[error] failed to initialize database, got error dial tcp: lookup db on 127.0.0.11:53: no such host
+2026/05/31 17:12:15 /src/internal/db/db.go:66
+[error] failed to initialize database, got error dial tcp: lookup db on 127.0.0.11:53: no such host
+2026/05/31 17:12:20 /src/internal/db/db.go:66
+[error] failed to initialize database, got error dial tcp: lookup db on 127.0.0.11:53: no such host
+2026/05/31 17:12:25 /src/internal/db/db.go:66
+[error] failed to initialize database, got error dial tcp: lookup db on 127.0.0.11:53: no such host
+2026/05/31 17:12:31 /src/internal/db/db.go:66
+[error] failed to initialize database, got error dial tcp: lookup db on 127.0.0.11:53: no such host
+2026/05/31 17:12:36 /src/internal/db/db.go:66
+[error] failed to initialize database, got error dial tcp: lookup db on 127.0.0.11:53: no such host
+2026/05/31 17:12:41 /src/internal/db/db.go:66
+[error] failed to initialize database, got error dial tcp: lookup db on 127.0.0.11:53: no such host
+2026/05/31 17:12:47 /src/internal/db/db.go:66
+[error] failed to initialize database, got error dial tcp: lookup db on 127.0.0.11:53: no such host
+2026/05/31 17:12:52 /src/internal/db/db.go:66
+[error] failed to initialize database, got error dial tcp: lookup db on 127.0.0.11:53: no such host
+2026/05/31 17:12:57 /src/internal/db/db.go:66
+[error] failed to initialize database, got error dial tcp: lookup db on 127.0.0.11:53: no such host
+2026/05/31 17:13:03 /src/internal/db/db.go:66
+[error] failed to initialize database, got error dial tcp: lookup db on 127.0.0.11:53: no such host
+2026/05/31 17:13:08 /src/internal/db/db.go:66
+[error] failed to initialize database, got error dial tcp: lookup db on 127.0.0.11:53: no such host
+2026/05/31 17:13:14 /src/internal/db/db.go:66
+[error] failed to initialize database, got error dial tcp: lookup db on 127.0.0.11:53: no such host
+2026/05/31 17:13:19 /src/internal/db/db.go:66
+[error] failed to initialize database, got error dial tcp: lookup db on 127.0.0.11:53: no such host
+2026/05/31 17:13:25 /src/internal/db/db.go:66
+[error] failed to initialize database, got error dial tcp: lookup db on 127.0.0.11:53: no such host
+2026/05/31 17:13:30 /src/internal/db/db.go:66
+[error] failed to initialize database, got error dial tcp: lookup db on 127.0.0.11:53: no such host
+2026/05/31 17:13:35 /src/internal/db/db.go:66
+[error] failed to initialize database, got error dial tcp: lookup db on 127.0.0.11:53: no such host
+2026/05/31 17:13:40 /src/internal/db/db.go:66
+[error] failed to initialize database, got error dial tcp: lookup db on 127.0.0.11:53: no such host
+2026/05/31 17:13:46 /src/internal/db/db.go:66
+[error] failed to initialize database, got error dial tcp: lookup db on 127.0.0.11:53: no such host
+2026/05/31 17:14:00 /src/internal/db/db.go:66
+[error] failed to initialize database, got error dial tcp: lookup db on 127.0.0.11:53: no such host
+2026/05/31 17:14:05 /src/internal/db/db.go:66
+[error] failed to initialize database, got error dial tcp: lookup db on 127.0.0.11:53: no such host
+2026/05/31 17:14:10 /src/internal/db/db.go:66
+[error] failed to initialize database, got error dial tcp: lookup db on 127.0.0.11:53: no such host
+2026/05/31 17:14:15 /src/internal/db/db.go:66
+[error] failed to initialize database, got error dial tcp: lookup db on 127.0.0.11:53: no such host
