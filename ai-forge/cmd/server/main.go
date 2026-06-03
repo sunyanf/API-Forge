@@ -62,6 +62,7 @@ func main() {
 		api.POST("/register", rootHandler.Register)
 		api.POST("/login", rootHandler.Login)
 		api.GET("/me", middleware.AuthMiddleware(), rootHandler.Me)
+		api.GET("/user/profile", middleware.AuthMiddleware(), rootHandler.UserProfile)
 	}
 
 	port := config.C.AppPort

@@ -11,6 +11,7 @@ type User struct {
 	PasswordHash string `gorm:"size:255;not null"`
 	Name         string `gorm:"size:128"`
 	Role         string `gorm:"size:32;default:'user'"`
+	ApiKey       *string `gorm:"size:36;uniqueIndex" json:"api_key,omitempty"`
 	CreatedAt    time.Time
 	UpdatedAt    time.Time
 	LastLogin    *time.Time

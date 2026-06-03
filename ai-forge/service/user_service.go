@@ -3,6 +3,7 @@ package service
 import (
 	"errors"
 
+	"github.com/google/uuid"
 	"golang.org/x/crypto/bcrypt"
 
 	"github.com/sunyanf/ai-forge/dao"
@@ -20,7 +21,8 @@ func RegisterUser(email, password, name string) (*model.User, error) {
 	if err != nil {
 		return nil, err
 	}
-	u := &model.User{Email: email, PasswordHash: string(h), Name: name}
+	apiKey := uuid.NewString()
+	u := &model.User{Email: email, PasswordHash: string(h), Name: name, ApiKey: &apiKey}
 	if err := dao.CreateUser(u); err != nil {
 		return nil, err
 	}

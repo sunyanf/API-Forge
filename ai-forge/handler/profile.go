@@ -7,8 +7,8 @@ import (
 	"github.com/sunyanf/ai-forge/service"
 )
 
-// Me returns current user info (protected by AuthMiddleware)
-func Me(c *gin.Context) {
+// UserProfile returns current user info including api key (protected)
+func UserProfile(c *gin.Context) {
 	v, ok := c.Get("user_id")
 	if !ok {
 		c.JSON(http.StatusUnauthorized, gin.H{"error": "missing user"})
@@ -24,7 +24,6 @@ func Me(c *gin.Context) {
 		c.JSON(http.StatusNotFound, gin.H{"error": "user not found"})
 		return
 	}
-	// return safe fields via DTO
 	apiKey := ""
 	if u.ApiKey != nil {
 		apiKey = *u.ApiKey
