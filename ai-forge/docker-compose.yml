@@ -1,0 +1,64 @@
+services:
+  db:
+    image: mysql:8.0
+    container_name: ai_forge_db
+    environment:
+      MYSQL_ROOT_PASSWORD: password
+      MYSQL_DATABASE: ai_forge
+    ports:
+      - "3306:3306"
+    healthcheck:
+      test: ["CMD", "mysqladmin", "ping", "-h", "localhost"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+    volumes:
+      - db_data:/var/lib/mysql
+    networks:
+      - ai_forge_net
+
+  redis:
+    image: redis:7
+    container_name: ai_forge_redis
+    ports:
+      - "6379:6379"
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+    networks:
+      - ai_forge_net
+
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: ai_forge_app
+    depends_on:
+      - db
+      - redis
+    env_file:
+      - .env
+    environment:
+      - APP_LOG_FILE=/var/log/ai-forge/app.log
+    ports:
+      - "8080:8080"
+    restart: unless-stopped
+    volumes:
+      - ./logs:/var/log/ai-forge
+    healthcheck:
+      test: ["CMD-SHELL", "curl -f http://localhost:8080/health || exit 1"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+    networks:
+      - ai_forge_net
+
+networks:
+  ai_forge_net:
+    driver: bridge
+
+volumes:
+  db_data:
+    driver: local
