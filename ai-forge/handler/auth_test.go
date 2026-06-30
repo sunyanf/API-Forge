@@ -8,9 +8,9 @@ import (
 	"testing"
 
 	"github.com/gin-gonic/gin"
+	sqlite "github.com/glebarez/sqlite"
 	"github.com/sunyanf/ai-forge/internal/db"
 	"github.com/sunyanf/ai-forge/model"
-	sqlite "github.com/glebarez/sqlite"
 	"gorm.io/gorm"
 )
 
@@ -28,32 +28,86 @@ func setupTestDB(t *testing.T) {
 
 func TestRegister(t *testing.T) {
 	gin.SetMode(gin.TestMode)
-	setupTestDB(t)
 
 	r := gin.New()
 	r.POST("/api/v1/register", Register)
 
-	payload := map[string]string{"email": "test@example.com", "password": "secret123", "name": "Test"}
-	b, _ := json.Marshal(payload)
-	req := httptest.NewRequest("POST", "/api/v1/register", bytes.NewBuffer(b))
-	req.Header.Set("Content-Type", "application/json")
-	w := httptest.NewRecorder()
-	r.ServeHTTP(w, req)
-
-	if w.Code != http.StatusCreated {
-		t.Fatalf("expected 201 got %d body:%s", w.Code, w.Body.String())
+	tests := []struct {
+		name         string
+		payload      map[string]string
+		expectStatus int
+		setupUser    bool // pre-insert a user with this email to test duplicate
+	}{
+		{
+			name:         "valid registration",
+			payload:      map[string]string{"email": "new@example.com", "password": "secret123", "name": "New User"},
+			expectStatus: http.StatusCreated,
+		},
+		{
+			name:         "missing email field",
+			payload:      map[string]string{"password": "secret123", "name": "No Email"},
+			expectStatus: http.StatusBadRequest,
+		},
+		{
+			name:         "invalid email format",
+			payload:      map[string]string{"email": "not-an-email", "password": "secret123", "name": "Bad Email"},
+			expectStatus: http.StatusBadRequest,
+		},
+		{
+			name:         "password shorter than 6 chars",
+			payload:      map[string]string{"email": "short@example.com", "password": "abc", "name": "Short PW"},
+			expectStatus: http.StatusBadRequest,
+		},
+		{
+			name:         "duplicate email registration",
+			payload:      map[string]string{"email": "dup@example.com", "password": "secret123", "name": "Duplicate"},
+			expectStatus: http.StatusBadRequest,
+			setupUser:    true,
+		},
 	}
 
-	// verify user in DB
-	var u model.User
-	if err := db.DB.Where("email = ?", "test@example.com").First(&u).Error; err != nil {
-		t.Fatalf("user not found in db: %v", err)
-	}
+	for _, tt := range tests {
+		t.Run(tt.name, func(t *testing.T) {
+			// fresh DB per sub-test
+			setupTestDB(t)
 
-	// duplicate registration should fail
-	w2 := httptest.NewRecorder()
-	r.ServeHTTP(w2, req)
-	if w2.Code == http.StatusCreated {
-		t.Fatalf("expected duplicate to fail, got %d", w2.Code)
+			// Pre-insert existing user if needed
+			if tt.setupUser {
+				existing := &model.User{Email: tt.payload["email"], Name: "Existing"}
+				if err := db.DB.Create(existing).Error; err != nil {
+					t.Fatalf("failed to create existing user: %v", err)
+				}
+			}
+
+			b, _ := json.Marshal(tt.payload)
+			req := httptest.NewRequest(http.MethodPost, "/api/v1/register", bytes.NewBuffer(b))
+			req.Header.Set("Content-Type", "application/json")
+			w := httptest.NewRecorder()
+			r.ServeHTTP(w, req)
+
+			if w.Code != tt.expectStatus {
+				t.Errorf("status = %d; want %d, body: %s", w.Code, tt.expectStatus, w.Body.String())
+			}
+
+			// Verify the response is a proper JSON envelope
+			var resp map[string]interface{}
+			if err := json.Unmarshal(w.Body.Bytes(), &resp); err != nil {
+				t.Fatalf("response is not valid JSON: %v", err)
+			}
+
+			// For success cases, verify data envelope contains expected fields
+			if tt.expectStatus == http.StatusCreated {
+				data, ok := resp["data"].(map[string]interface{})
+				if !ok {
+					t.Fatal("expected 'data' in response for successful registration")
+				}
+				if _, hasID := data["id"]; !hasID {
+					t.Error("expected 'id' in response data")
+				}
+				if data["email"] != tt.payload["email"] {
+					t.Errorf("expected email=%q, got %v", tt.payload["email"], data["email"])
+				}
+			}
+		})
 	}
 }

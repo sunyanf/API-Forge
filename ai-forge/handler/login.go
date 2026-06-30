@@ -1,9 +1,8 @@
 package handler
 
 import (
-	"net/http"
-
 	"github.com/gin-gonic/gin"
+	"github.com/sunyanf/ai-forge/response"
 	"github.com/sunyanf/ai-forge/service"
 )
 
@@ -16,18 +15,18 @@ type loginRequest struct {
 func Login(c *gin.Context) {
 	var req loginRequest
 	if err := c.ShouldBindJSON(&req); err != nil {
-		c.JSON(http.StatusBadRequest, gin.H{"error": err.Error()})
+		response.BadRequest(c, err.Error())
 		return
 	}
 	user, err := service.AuthenticateUser(req.Email, req.Password)
 	if err != nil {
-		c.JSON(http.StatusUnauthorized, gin.H{"error": "invalid credentials"})
+		response.Unauthorized(c, "invalid email or password")
 		return
 	}
 	token, err := service.GenerateJWT(user)
 	if err != nil {
-		c.JSON(http.StatusInternalServerError, gin.H{"error": "failed to generate token"})
+		response.InternalError(c, "failed to generate token")
 		return
 	}
-	c.JSON(http.StatusOK, gin.H{"token": token})
+	response.OK(c, gin.H{"token": token})
 }

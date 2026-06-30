@@ -5,15 +5,16 @@ import (
 	"log"
 	"os"
 	"path/filepath"
+	"time"
 
 	"github.com/gin-gonic/gin"
 
 	"github.com/sunyanf/ai-forge/config"
-	"github.com/sunyanf/ai-forge/internal/db"
-	"github.com/sunyanf/ai-forge/model"
-	"github.com/sunyanf/ai-forge/internal/router"
 	rootHandler "github.com/sunyanf/ai-forge/handler"
+	"github.com/sunyanf/ai-forge/internal/db"
+	"github.com/sunyanf/ai-forge/internal/router"
 	"github.com/sunyanf/ai-forge/middleware"
+	"github.com/sunyanf/ai-forge/model"
 )
 
 func ensureLogFile(path string) (*os.File, error) {
@@ -57,12 +58,36 @@ func main() {
 	r.Use(middleware.RequestLogger())
 	router.RegisterRoutes(r)
 
+	// Health check endpoint
+	r.GET("/health", rootHandler.Health)
+
+	// Public API endpoints
 	api := r.Group("/api/v1")
 	{
+		// Authentication endpoints (public)
 		api.POST("/register", rootHandler.Register)
 		api.POST("/login", rootHandler.Login)
+
+		// Protected user endpoints
 		api.GET("/me", middleware.AuthMiddleware(), rootHandler.Me)
+
+		// Free service endpoints (with rate limiting)
+		api.GET("/ip/location", middleware.RateLimitMiddleware(60, time.Minute), rootHandler.GetIPLocation)
+		api.GET("/image/random", middleware.RateLimitMiddleware(60, time.Minute), rootHandler.GetRandomImage)
+		api.GET("/image/redirect", middleware.RateLimitMiddleware(60, time.Minute), rootHandler.GetRandomImageRedirect)
+
+		// API Key protected endpoints (for external API access)
+		apiWithKey := api.Group("")
+		apiWithKey.Use(middleware.APIKeyOrJWTMiddleware())
+		{
+			// Add API key protected endpoints here
+			// apiWithKey.GET("/service/example", rootHandler.ExampleService)
+		}
 	}
+
+	// serve OpenAPI spec and simple Swagger UI index
+	r.StaticFile("/docs/openapi.yaml", "./openapi.yaml")
+	r.GET("/docs", func(c *gin.Context) { c.File("./docs/swagger_index.html") })
 
 	port := config.C.AppPort
 	if port == "" {

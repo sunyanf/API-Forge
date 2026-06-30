@@ -19,7 +19,7 @@ var C Config
 
 func Load() {
 	C = Config{
-		MySQLHost: getEnv("MYSQL_HOST", "127.0.0.1"),
+		MySQLHost: getEnv("MYSQL_HOST", "db"),
 		MySQLPort: getEnv("MYSQL_PORT", "3306"),
 		MySQLUser: getEnv("MYSQL_USER", "root"),
 		MySQLPass: getEnv("MYSQL_PASSWORD", "password"),

@@ -248,7 +248,9 @@ CREATE TABLE billing_invoices (
   - 响应 200：
     { "token":"<jwt>", "user":{"id":123,"email":"a@b.com"} }
 - GET /api/v1/me
-  - 描述：获取当前用户（需 JWT）
+  - 描述：获取当前用户详细信息与 API Key（需 JWT）
+  - 响应 200：
+    { "id": 123, "email": "a@b.com", "name": "张三", "role": "user", "api_key": "sk_live_xxx", "created_at": "2026-06-03T09:00:00Z" }
 
 2) 项目（需 JWT）
 - POST /api/v1/projects

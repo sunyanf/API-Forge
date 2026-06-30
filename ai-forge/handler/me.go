@@ -1,9 +1,8 @@
 package handler
 
 import (
-	"net/http"
-
 	"github.com/gin-gonic/gin"
+	"github.com/sunyanf/ai-forge/response"
 	"github.com/sunyanf/ai-forge/service"
 )
 
@@ -11,26 +10,30 @@ import (
 func Me(c *gin.Context) {
 	v, ok := c.Get("user_id")
 	if !ok {
-		c.JSON(http.StatusUnauthorized, gin.H{"error": "missing user"})
+		response.Unauthorized(c, "missing user")
 		return
 	}
 	uid, ok := v.(uint)
 	if !ok {
-		c.JSON(http.StatusUnauthorized, gin.H{"error": "invalid user id"})
+		response.Unauthorized(c, "invalid user id")
 		return
 	}
 	u, err := service.GetUserByID(uid)
 	if err != nil {
-		c.JSON(http.StatusNotFound, gin.H{"error": "user not found"})
+		response.NotFound(c, "user not found")
 		return
 	}
-	// return safe fields via DTO
+	apiKey := ""
+	if u.ApiKey != nil {
+		apiKey = *u.ApiKey
+	}
 	resp := UserResponse{
 		ID:        u.ID,
 		Email:     u.Email,
 		Name:      u.Name,
 		Role:      u.Role,
+		ApiKey:    apiKey,
 		CreatedAt: u.CreatedAt,
 	}
-	c.JSON(http.StatusOK, resp)
+	response.OK(c, resp)
 }

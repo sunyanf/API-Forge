@@ -13,3 +13,12 @@ func GetUserByID(id uint) (*model.User, error) {
 	}
 	return &u, nil
 }
+
+// GetUserByAPIKey returns a user by API key
+func GetUserByAPIKey(apiKey string) (*model.User, error) {
+	var u model.User
+	if err := db.DB.Where("api_key = ?", apiKey).First(&u).Error; err != nil {
+		return nil, err
+	}
+	return &u, nil
+}

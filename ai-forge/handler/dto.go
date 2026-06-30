@@ -8,5 +8,6 @@ type UserResponse struct {
 	Email     string    `json:"email"`
 	Name      string    `json:"name"`
 	Role      string    `json:"role"`
+	ApiKey    string    `json:"api_key,omitempty"`
 	CreatedAt time.Time `json:"created_at"`
 }

@@ -1,0 +1,462 @@
+openapi: 3.0.1
+info:
+  title: AI-Forge API
+  version: 1.0.0
+  description: |
+    AI-Forge is an AI-native API platform for independent developers.
+
+    ## Features
+    - User authentication with JWT tokens
+    - API Key management for programmatic access
+    - IP geolocation lookup service
+    - Random image generation service
+    - Rate limiting on all endpoints
+
+    ## Authentication
+    Most endpoints require authentication via:
+    - JWT Bearer token (for user-facing operations)
+    - X-API-Key header (for API access)
+  contact:
+    name: API Support
+servers:
+  - url: http://localhost:8080
+    description: Local development server
+components:
+  securitySchemes:
+    bearerAuth:
+      type: http
+      scheme: bearer
+      bearerFormat: JWT
+      description: JWT token for user authentication
+    ApiKeyAuth:
+      type: apiKey
+      in: header
+      name: X-API-Key
+      description: API key for programmatic access
+  schemas:
+    RegisterRequest:
+      type: object
+      required: [email, password]
+      properties:
+        email:
+          type: string
+          format: email
+          description: User email address
+        password:
+          type: string
+          minLength: 6
+          description: User password (minimum 6 characters)
+        name:
+          type: string
+          description: Optional user display name
+    LoginRequest:
+      type: object
+      required: [email, password]
+      properties:
+        email:
+          type: string
+          format: email
+        password:
+          type: string
+    TokenResponse:
+      type: object
+      properties:
+        data:
+          type: object
+          properties:
+            token:
+              type: string
+              description: JWT access token
+    UserResponse:
+      type: object
+      properties:
+        data:
+          type: object
+          properties:
+            id:
+              type: integer
+            email:
+              type: string
+            name:
+              type: string
+            role:
+              type: string
+              enum: [user, admin, suspended]
+            api_key:
+              type: string
+              description: User's API key for programmatic access
+            created_at:
+              type: string
+              format: date-time
+    IPLocationRequest:
+      type: object
+      properties:
+        ip:
+          type: string
+          description: IP address to lookup (optional, defaults to client IP)
+    IPLocationResponse:
+      type: object
+      properties:
+        data:
+          type: object
+          properties:
+            ip:
+              type: string
+            country:
+              type: string
+            country_code:
+              type: string
+            region:
+              type: string
+            region_name:
+              type: string
+            city:
+              type: string
+            zip:
+              type: string
+            lat:
+              type: number
+              format: double
+            lon:
+              type: number
+              format: double
+            timezone:
+              type: string
+            isp:
+              type: string
+            org:
+              type: string
+            as:
+              type: string
+            status:
+              type: string
+    RandomImageResponse:
+      type: object
+      properties:
+        data:
+          type: object
+          properties:
+            url:
+              type: string
+              description: Random image URL
+            width:
+              type: integer
+            height:
+              type: integer
+            category:
+              type: string
+              description: Image category if specified
+            provider:
+              type: string
+              description: Image service provider
+            generated_at:
+              type: string
+              format: date-time
+    HealthResponse:
+      type: object
+      properties:
+        data:
+          type: object
+          properties:
+            status:
+              type: string
+              enum: [ok, degraded]
+            version:
+              type: string
+            timestamp:
+              type: string
+              format: date-time
+            database:
+              type: string
+              enum: [connected, disconnected]
+    ErrorResponse:
+      type: object
+      properties:
+        error:
+          type: string
+          description: HTTP error name
+        message:
+          type: string
+          description: Detailed error message
+    SuccessResponse:
+      type: object
+      properties:
+        data:
+          type: object
+          description: Response data
+        message:
+          type: string
+          description: Optional success message
+security:
+  - bearerAuth: []
+paths:
+  /health:
+    get:
+      summary: Health check endpoint
+      description: Returns service health status including database connectivity
+      tags:
+        - System
+      responses:
+        '200':
+          description: Service is healthy
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/HealthResponse'
+        '503':
+          description: Service is degraded
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/HealthResponse'
+  /ping:
+    get:
+      summary: Simple ping endpoint
+      tags:
+        - System
+      responses:
+        '200':
+          description: Pong response
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+                    example: "pong"
+  /api/v1/register:
+    post:
+      summary: Register a new user
+      description: Create a new user account with email and password
+      tags:
+        - Authentication
+      security: []
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/RegisterRequest'
+            example:
+              email: "user@example.com"
+              password: "securepassword123"
+              name: "John Doe"
+      responses:
+        '201':
+          description: User registered successfully
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/SuccessResponse'
+        '400':
+          description: Invalid request or user already exists
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+  /api/v1/login:
+    post:
+      summary: Login with credentials
+      description: Authenticate user and receive JWT token
+      tags:
+        - Authentication
+      security: []
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/LoginRequest'
+            example:
+              email: "user@example.com"
+              password: "securepassword123"
+      responses:
+        '200':
+          description: Login successful
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/TokenResponse'
+        '401':
+          description: Invalid credentials
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+  /api/v1/me:
+    get:
+      summary: Get current user info
+      description: Returns authenticated user's profile information
+      tags:
+        - User
+      security:
+        - bearerAuth: []
+      responses:
+        '200':
+          description: User information retrieved successfully
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/UserResponse'
+        '401':
+          description: Unauthorized
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+  /api/v1/ip/location:
+    get:
+      summary: IP geolocation lookup
+      description: |
+        Lookup geographic location and ISP information for an IP address.
+        If no IP is provided, uses the client's IP address.
+
+        **Rate Limit:** 60 requests per minute
+      tags:
+        - Services
+      security: []
+      parameters:
+        - name: ip
+          in: query
+          description: IP address to lookup (optional)
+          schema:
+            type: string
+          example: "8.8.8.8"
+      responses:
+        '200':
+          description: IP location information
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/IPLocationResponse'
+        '400':
+          description: Invalid IP address or private IP
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+        '429':
+          description: Rate limit exceeded
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+      headers:
+        X-RateLimit-Limit:
+          schema:
+            type: string
+          description: Rate limit ceiling
+        X-RateLimit-Remaining:
+          schema:
+            type: string
+          description: Remaining requests in window
+        X-RateLimit-Reset:
+          schema:
+            type: string
+          description: Window reset timestamp (Unix)
+  /api/v1/image/random:
+    get:
+      summary: Get random image
+      description: |
+        Returns a random high-quality image URL from Picsum Photos.
+        Supports custom dimensions and categories.
+
+        **Rate Limit:** 60 requests per minute
+      tags:
+        - Services
+      security: []
+      parameters:
+        - name: width
+          in: query
+          description: Image width in pixels (100-4096)
+          schema:
+            type: integer
+            default: 1280
+            minimum: 100
+            maximum: 4096
+        - name: height
+          in: query
+          description: Image height in pixels (100-4096)
+          schema:
+            type: integer
+            default: 720
+            minimum: 100
+            maximum: 4096
+        - name: category
+          in: query
+          description: Image category filter
+          schema:
+            type: string
+            enum: [nature, architecture, people, technology, animals, food, travel, abstract]
+        - name: format
+          in: query
+          description: Response format
+          schema:
+            type: string
+            enum: [url, redirect]
+            default: url
+      responses:
+        '200':
+          description: Random image information
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/RandomImageResponse'
+        '307':
+          description: Redirect to random image (when format=redirect)
+          headers:
+            Location:
+              schema:
+                type: string
+              description: URL of the random image
+        '400':
+          description: Invalid parameters
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+        '429':
+          description: Rate limit exceeded
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+  /api/v1/image/redirect:
+    get:
+      summary: Redirect to random image
+      description: Redirects directly to a random image URL
+      tags:
+        - Services
+      security: []
+      parameters:
+        - name: width
+          in: query
+          schema:
+            type: integer
+            default: 1280
+        - name: height
+          in: query
+          schema:
+            type: integer
+            default: 720
+        - name: category
+          in: query
+          schema:
+            type: string
+      responses:
+        '307':
+          description: Redirect to random image
+          headers:
+            Location:
+              schema:
+                type: string
+tags:
+  - name: System
+    description: System health and status endpoints
+  - name: Authentication
+    description: User registration and login
+  - name: User
+    description: User profile management
+  - name: Services
+    description: Free API services (IP lookup, random images)
