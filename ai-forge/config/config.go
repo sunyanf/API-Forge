@@ -4,15 +4,15 @@ import (
 	"os"
 )
 
-// Config holds application configuration loaded from environment variables
+// Config 应用配置（从环境变量加载）
 type Config struct {
-	MySQLHost string
-	MySQLPort string
-	MySQLUser string
-	MySQLPass string
-	MySQLDB   string
-	AppPort   string
-	AppLog    string
+	MySQLHost string // MySQL 主机地址
+	MySQLPort string // MySQL 端口
+	MySQLUser string // MySQL 用户名
+	MySQLPass string // MySQL 密码
+	MySQLDB   string // 数据库名称
+	AppPort   string // 服务端口
+	AppLog    string // 日志文件路径
 }
 
 var C Config

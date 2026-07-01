@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>AI-Forge Dashboard</title>
+<style>
+:root{--bg:#0f172a;--card:#1e293b;--border:#334155;--text:#e2e8f0;--muted:#94a3b8;--primary:#3b82f6;--green:#22c55e;--red:#ef4444;--yellow:#eab308;--orange:#f97316;--purple:#8b5cf6}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;background:var(--bg);color:var(--text);min-height:100vh}
+.container{max-width:1100px;margin:0 auto;padding:16px 24px}
+header{display:flex;justify-content:space-between;align-items:center;padding:18px 0;border-bottom:1px solid var(--border);margin-bottom:24px}
+header h1{font-size:26px;font-weight:700}
+header h1 span{color:var(--primary)}
+.user-area{display:flex;align-items:center;gap:12px}
+.user-badge{display:flex;align-items:center;gap:8px;padding:6px 14px;border-radius:20px;font-size:13px;font-weight:600}
+.user-guest{background:#1e293b;color:var(--muted)}
+.user-free{background:#1e3a5f;color:#60a5fa}
+.user-vip{background:#3b1e5f;color:#c084fc}
+.btn-sm{padding:6px 14px;border-radius:6px;border:none;cursor:pointer;font-size:12px;font-weight:600;transition:.2s}
+.btn-sm.outline{background:transparent;border:1px solid var(--border);color:var(--text)}
+.btn-sm.outline:hover{border-color:var(--primary);color:var(--primary)}
+.tier-banner{display:flex;align-items:center;justify-content:space-between;background:linear-gradient(135deg,#1e293b,#0f172a);border:1px solid var(--border);border-radius:12px;padding:16px 20px;margin-bottom:24px}
+.tier-banner.premium{background:linear-gradient(135deg,#3b1e5f,#1e1040);border-color:#6d28d9}
+.tier-info h3{font-size:16px;margin-bottom:4px}
+.tier-info p{font-size:13px;color:var(--muted)}
+.tier-badge{padding:6px 18px;border-radius:20px;font-size:13px;font-weight:700}
+.tier-badge.free-tier{background:#1e3a5f;color:#60a5fa}
+.tier-badge.vip-tier{background:#6d28d9;color:#e9d5ff}
+.tabs{display:flex;gap:4px;margin-bottom:20px;background:#0c1222;border-radius:10px;padding:4px}
+.tab{flex:1;padding:10px 16px;border:none;border-radius:8px;background:transparent;color:var(--muted);cursor:pointer;font-size:14px;font-weight:600;text-align:center;transition:.2s}
+.tab.active{background:var(--primary);color:#fff}
+.tab:disabled{opacity:.4;cursor:not-allowed}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(340px,1fr));gap:20px}
+.card{background:var(--card);border:1px solid var(--border);border-radius:14px;padding:24px}
+.card h3{font-size:17px;margin-bottom:14px;display:flex;align-items:center;gap:8px}
+.badge{font-size:10px;padding:3px 8px;border-radius:4px;font-weight:700;text-transform:uppercase}
+.badge-free{background:#1e3a5f;color:#60a5fa}
+.badge-vip{background:#3b1e5f;color:#c084fc}
+.badge-auth{background:#5c1a1a;color:#fca5a5}
+.inline-form{display:flex;gap:8px;flex-wrap:wrap}
+.inline-form input,.inline-form select{flex:1;min-width:100px;padding:10px 14px;border-radius:8px;border:1px solid var(--border);background:var(--bg);color:var(--text);font-size:14px}
+.inline-form input:focus{outline:none;border-color:var(--primary)}
+.btn{padding:10px 20px;border-radius:8px;border:none;cursor:pointer;font-size:14px;font-weight:600;transition:.2s;white-space:nowrap}
+.btn-primary{background:var(--primary);color:#fff}
+.btn-primary:hover{opacity:.85}
+.btn-green{background:var(--green);color:#fff}
+.btn-purple{background:var(--purple);color:#fff}
+.btn-orange{background:var(--orange);color:#fff}
+.btn:disabled{opacity:.4;cursor:not-allowed}
+.result-area{margin-top:14px}
+.result-area img{width:100%;max-height:400px;object-fit:cover;border-radius:10px;border:1px solid var(--border);display:none}
+.result-area img.show{display:block}
+.info-table{display:none;width:100%;border-collapse:collapse}
+.info-table.show{display:table}
+.info-table td{padding:8px 0;font-size:13px;border-bottom:1px solid #1a2332}
+.info-table td:first-child{color:var(--muted);width:100px;font-weight:600}
+.ai-output{display:none;background:linear-gradient(135deg,#1a1a2e,#16213e);border:1px solid var(--purple);border-radius:10px;padding:20px;margin-top:14px;font-size:14px;line-height:1.8;white-space:pre-wrap}
+.ai-output.show{display:block}
+.error-text{display:none;color:var(--red);font-size:13px;margin-top:8px}
+.error-text.show{display:block}
+.lock-overlay{position:relative;opacity:.5;pointer-events:none;filter:grayscale(60%)}
+.lock-badge{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);background:rgba(0,0,0,.85);color:#fff;padding:10px 20px;border-radius:8px;font-size:14px;font-weight:700;z-index:2}
+.stat-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:12px;margin-bottom:16px}
+.stat-box{background:var(--bg);border-radius:10px;padding:16px;text-align:center}
+.stat-box .num{font-size:28px;font-weight:800;margin-bottom:4px}
+.stat-box .lbl{font-size:11px;color:var(--muted);text-transform:uppercase}
+.toast{position:fixed;bottom:24px;right:24px;padding:12px 24px;border-radius:8px;color:#fff;font-size:14px;font-weight:600;z-index:999;animation:slideIn .3s}
+.toast-success{background:var(--green)}
+.toast-error{background:var(--red)}
+.toast-info{background:var(--primary)}
+@keyframes slideIn{from{transform:translateY(20px);opacity:0}to{transform:translateY(0);opacity:1}}
+footer{text-align:center;padding:32px 0;color:var(--muted);font-size:12px;border-top:1px solid var(--border);margin-top:36px}
+.pricing-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:20px}
+.pricing-card{background:var(--card);border:1px solid var(--border);border-radius:14px;padding:28px;text-align:center}
+.pricing-card.vip{border-color:#6d28d9;box-shadow:0 0 20px rgba(109,40,217,.15)}
+.pricing-card h4{font-size:20px;margin-bottom:8px}
+.pricing-card .price{font-size:36px;font-weight:800;margin:12px 0}
+.pricing-card .price span{font-size:14px;font-weight:400;color:var(--muted)}
+.pricing-card ul{list-style:none;text-align:left;margin:16px 0;font-size:13px;color:var(--muted)}
+.pricing-card ul li{padding:6px 0}
+.pricing-card ul li::before{content:"✓ ";color:var(--green);font-weight:700}
+code{background:#0c1222;padding:2px 8px;border-radius:4px;font-size:12px;color:var(--green)}
+</style>
+</head>
+<body>
+<div class="container">
+<header>
+<h1>AI-<span>Forge</span></h1>
+<div class="user-area">
+<span id="serverDot" style="width:8px;height:8px;border-radius:50%;background:#ef4444"></span>
+<span id="userStatus" class="user-badge user-guest">未登录</span>
+<button class="btn-sm outline" onclick="doLogout()" id="btnLogout" style="display:none">退出</button>
+</div>
+</header>
+
+<div id="tierBanner" class="tier-banner">
+<div class="tier-info"><h3>欢迎来到 AI-Forge</h3><p>登录后即可免费使用基础 API 服务</p></div>
+<span class="tier-badge free-tier">游客模式</span>
+</div>
+
+<!-- Auth Gate -->
+<div id="authGate">
+<div class="grid">
+<div class="card">
+<h3>注册账号</h3>
+<div class="inline-form">
+<input type="email" id="regEmail" placeholder="邮箱地址">
+<input type="text" id="regName" placeholder="昵称（选填）">
+<input type="password" id="regPassword" placeholder="密码（6位）">
+<button class="btn btn-primary" onclick="doRegister()">注册</button>
+</div>
+<div id="regError" class="error-text"></div>
+</div>
+<div class="card">
+<h3>登录</h3>
+<div class="inline-form">
+<input type="email" id="loginEmail" placeholder="邮箱" value="test@example.com">
+<input type="password" id="loginPassword" placeholder="密码" value="123456">
+<button class="btn btn-green" onclick="doLogin()">登录</button>
+</div>
+<div id="loginError" class="error-text"></div>
+</div>
+</div>
+</div>
+
+<!-- Main Content -->
+<div id="mainContent" style="display:none">
+<div class="tabs">
+<button class="tab active" onclick="switchTab('services')">服务 API</button>
+<button class="tab" onclick="switchTab('ai-studio')">AI 创作</button>
+<button class="tab" onclick="switchTab('usage')">使用统计</button>
+<button class="tab" onclick="switchTab('pricing')">升级 VIP</button>
+<button class="tab" onclick="switchTab('profile')">个人中心</button>
+</div>
+
+<!-- Services -->
+<div id="tab-services" class="grid">
+<div class="card">
+<h3>IP 归属地查询 <span class="badge badge-free">免费</span></h3>
+<div class="inline-form">
+<input type="text" id="ipInput" placeholder="输入 IP（留空查当前 IP）">
+<button class="btn btn-primary" onclick="doIPLookup()">查询</button>
+</div>
+<div class="result-area">
+<table class="info-table" id="ipTable">
+<tr><td>IP 地址</td><td id="ipAddr">-</td></tr>
+<tr><td>国家/地区</td><td id="ipCountry">-</td></tr>
+<tr><td>省份/州</td><td id="ipRegion">-</td></tr>
+<tr><td>城市</td><td id="ipCity">-</td></tr>
+<tr><td>时区</td><td id="ipTz">-</td></tr>
+<tr><td>ISP 运营商</td><td id="ipISP">-</td></tr>
+<tr><td>经纬度</td><td id="ipCoord">-</td></tr>
+</table>
+<div class="error-text" id="ipErr"></div>
+</div>
+</div>
+<div class="card">
+<h3>随机图片 <span class="badge badge-free">免费</span></h3>
+<div class="inline-form">
+<input type="number" id="imgWidth" placeholder="宽" value="800" style="flex:.5">
+<input type="number" id="imgHeight" placeholder="高" value="600" style="flex:.5">
+<select id="imgCategory" style="flex:1"><option value="">全部类别</option><option value="nature">自然风光</option><option value="architecture">建筑</option><option value="people">人物</option><option value="technology">科技</option><option value="animals">动物</option><option value="food">美食</option><option value="travel">旅行</option></select>
+<button class="btn btn-primary" onclick="doRandomImage()">随机一张</button>
+</div>
+<div class="result-area">
+<img id="imgDisplay" alt="" style="display:none">
+<div class="error-text" id="imgErr"></div>
+<div style="margin-top:8px;font-size:11px;color:var(--muted)" id="imgInfo"></div>
+</div>
+</div>
+</div>
+
+<!-- AI Studio -->
+<div id="tab-ai-studio" style="display:none">
+<div class="grid">
+<div class="card" style="position:relative">
+<h3>AI 内容创作 <span class="badge badge-vip">VIP</span></h3>
+<div style="position:relative">
+<div class="inline-form lock-overlay" id="aiForm">
+<select id="aiType" style="flex:1.2"><option value="xiaohongshu">小红书文案</option><option value="product">产品卖点</option><option value="slogan">广告语</option><option value="email">营销邮件</option></select>
+<input type="text" id="aiKeyword" placeholder="输入关键词（如：蓝牙耳机）" style="flex:2">
+<button class="btn btn-purple" onclick="doAIGenerate()">生成</button>
+</div>
+<div class="lock-badge" id="aiLock">升级 VIP 解锁 AI 创作</div>
+</div>
+<div class="ai-output" id="aiOutput"></div>
+<div class="error-text" id="aiError"></div>
+</div>
+<div class="card">
+<h3>AI 使用说明</h3>
+<p style="font-size:13px;color:var(--muted);line-height:1.8">
+AI 内容创作是 AI-Forge 的核心增值服务<br><br>
+支持类型：<br>
+• 小红书文案 — 生成种草笔记<br>
+• 产品卖点 — 提炼核心卖点<br>
+• 广告语 — 创意 slogan<br>
+• 营销邮件 — 专业营销邮件<br><br>
+VIP 用户可无限次使用<br>
+API 调用：<br>
+<code>POST /api/v1/ai/content</code>
+</p>
+</div>
+</div>
+</div>
+
+<!-- Usage Stats -->
+<div id="tab-usage" style="display:none">
+<div class="stat-grid">
+<div class="stat-box"><div class="num" style="color:var(--primary)" id="statTotal">0</div><div class="lbl">总请求数</div></div>
+<div class="stat-box"><div class="num" style="color:var(--green)" id="statTokens">0</div><div class="lbl">Token 消耗</div></div>
+<div class="stat-box"><div class="num" style="color:var(--yellow)" id="statFree">1000</div><div class="lbl">免费额度剩余</div></div>
+<div class="stat-box"><div class="num" style="color:var(--purple)" id="statVIP">-</div><div class="lbl">VIP 额度剩余</div></div>
+<div class="stat-box"><div class="num" style="color:var(--orange)" id="statLimit">60</div><div class="lbl">速率限制/分钟</div></div>
+</div>
+<div class="card">
+<h3>调用趋势 (演示)</h3>
+<div style="display:flex;align-items:flex-end;gap:4px;height:160px;padding:10px 0" id="chart"></div>
+<div style="color:var(--muted);font-size:11px;text-align:center">最近7天 · 模拟数据</div>
+</div>
+</div>
+
+<!-- Pricing -->
+<div id="tab-pricing" style="display:none">
+<div class="pricing-grid">
+<div class="pricing-card"><h4>免费版</h4><div class="price">¥0<span>/月</span></div><ul><li>IP 归属地查询</li><li>随机图片生成</li><li>60次/分钟速率限制</li><li>JWT 认证</li><li>API Key 管理</li></ul><button class="btn btn-primary" style="width:100%" disabled>当前套餐</button></div>
+<div class="pricing-card vip"><h4>专业版</h4><div class="price">¥29<span>/月</span></div><ul><li>免费版全部功能</li><li>AI 内容创作</li><li>1000次/分钟速率限制</li><li>优先技术支持</li><li>API 调用统计</li></ul><button class="btn btn-purple" id="btnUpgrade" style="width:100%" onclick="doUpgrade()">立即升级</button></div>
+<div class="pricing-card"><h4>企业版</h4><div class="price">¥99<span>/月</span></div><ul><li>专业版全部功能</li><li>自定义模型配置</li><li>无限制 API 调用</li><li>专属技术支持</li><li>SLA 99.9%</li></ul><button class="btn btn-orange" style="width:100%" onclick="toast('演示模式：请联系管理员','info')">联系我们</button></div>
+</div>
+</div>
+
+<!-- Profile -->
+<div id="tab-profile" style="display:none">
+<div class="grid">
+<div class="card">
+<h3>个人信息</h3>
+<table class="info-table show" id="profileTable">
+<tr><td>用户 ID</td><td id="profID">-</td></tr>
+<tr><td>邮箱</td><td id="profEmail">-</td></tr>
+<tr><td>昵称</td><td id="profName">-</td></tr>
+<tr><td>角色</td><td id="profRole">-</td></tr>
+<tr><td>注册时间</td><td id="profCreated">-</td></tr>
+</table>
+</div>
+<div class="card">
+<h3>API Key <span class="badge badge-auth">敏感</span></h3>
+<p style="font-size:12px;color:var(--muted);margin-bottom:12px">使用此 Key 调用需要 API Key 鉴权的接口</p>
+<div style="background:var(--bg);border-radius:8px;padding:14px;display:flex;align-items:center;justify-content:space-between">
+<code style="font-size:13px" id="profKey">-</code>
+<button class="btn-sm outline" onclick="copyKey()">复制</button>
+</div>
+<div style="margin-top:12px;font-size:12px;color:var(--muted)">示例调用：<code style="display:block;margin-top:4px;padding:8px">curl -H "X-API-Key: YOUR_KEY" http://localhost:8080/api/v1/ip/location?ip=8.8.8.8</code></div>
+</div>
+</div>
+</div>
+</div>
+<footer><p>AI-Forge v1.1 · AI 原生 API 工坊 · 为独立开发者打造</p></footer>
+</div>
+
+<script>
+var API='';
+var token='';
+var currentUser=null;
+
+/* ====== 工具函数 ====== */
+function toast(m,t){var e=document.createElement('div');e.className='toast toast-'+t;e.textContent=m;document.body.appendChild(e);setTimeout(function(){e.remove()},3000)}
+function hideEl(id){var el=document.getElementById(id);if(el){el.style.display='none';el.classList.remove('show')}}
+function showEl(id,as){var el=document.getElementById(id);if(!el)return;el.style.display=as||'block';el.classList.add('show')}
+
+async function apiCall(path,opts){
+opts=opts||{};
+var headers=opts.headers||{};
+if(token)headers['Authorization']='Bearer '+token;
+if(opts.body)headers['Content-Type']='application/json';
+var res=await fetch(API+path,{method:opts.method||'GET',headers:headers,body:opts.body});
+var data=await res.json();
+return{ok:res.ok,status:res.status,data:data};
+}
+
+/* ====== 认证 ====== */
+async function doRegister(){
+hideEl('regError');
+var body=JSON.stringify({email:document.getElementById('regEmail').value.trim(),password:document.getElementById('regPassword').value,name:document.getElementById('regName').value.trim()||''});
+var r=await apiCall('/api/v1/register',{method:'POST',body:body});
+if(!r.ok){var msg=r.data.message||r.data.error||'注册失败';document.getElementById('regError').textContent=msg;showEl('regError');return}
+toast('注册成功！请登录','success');
+document.getElementById('loginEmail').value=document.getElementById('regEmail').value;
+}
+
+async function doLogin(){
+hideEl('loginError');
+var body=JSON.stringify({email:document.getElementById('loginEmail').value.trim(),password:document.getElementById('loginPassword').value});
+var r=await apiCall('/api/v1/login',{method:'POST',body:body});
+if(!r.ok||!r.data.data||!r.data.data.token){var msg=(r.data&&r.data.message)||'登录失败';document.getElementById('loginError').textContent=msg;showEl('loginError');return}
+token=r.data.data.token;localStorage.setItem('ai_forge_token',token);
+toast('登录成功！','success');await loadUser();
+}
+
+async function loadUser(){
+var r=await apiCall('/api/v1/me');
+if(r.ok&&r.data.data){currentUser=r.data.data;onLoggedIn()}
+}
+
+function doLogout(){
+token='';currentUser=null;localStorage.removeItem('ai_forge_token');
+document.getElementById('authGate').style.display='';
+document.getElementById('mainContent').style.display='none';
+document.getElementById('btnLogout').style.display='none';
+document.getElementById('userStatus').className='user-badge user-guest';
+document.getElementById('userStatus').textContent='未登录';
+var tb=document.getElementById('tierBanner');tb.className='tier-banner';
+tb.querySelector('h3').textContent='欢迎来到 AI-Forge';
+tb.querySelector('p').textContent='登录后即可免费使用基础 API 服务';
+tb.querySelector('.tier-badge').className='tier-badge free-tier';
+tb.querySelector('.tier-badge').textContent='游客模式';
+unlockAI(false);document.getElementById('aiLock').style.display='';
+}
+
+function onLoggedIn(){
+document.getElementById('authGate').style.display='none';
+document.getElementById('mainContent').style.display='';
+document.getElementById('btnLogout').style.display='';
+var isVip=currentUser.role==='vip'||currentUser.role==='admin';
+var ub=document.getElementById('userStatus');
+ub.className='user-badge '+(isVip?'user-vip':'user-free');
+ub.textContent=(currentUser.name||currentUser.email)+(isVip?' [VIP]':'');
+var tb=document.getElementById('tierBanner');
+if(isVip){
+tb.className='tier-banner premium';
+tb.querySelector('h3').textContent='专业版会员';
+tb.querySelector('p').textContent='畅享全部 API 服务，包括 AI 内容创作';
+tb.querySelector('.tier-badge').className='tier-badge vip-tier';
+tb.querySelector('.tier-badge').textContent='VIP 会员';
+unlockAI(true);
+document.getElementById('btnUpgrade').disabled=true;
+document.getElementById('btnUpgrade').textContent='已是 VIP';
+}else{
+tb.className='tier-banner';
+tb.querySelector('h3').textContent='免费用户';
+tb.querySelector('p').textContent='可使用基础 API，升级 VIP 解锁 AI 功能';
+tb.querySelector('.tier-badge').className='tier-badge free-tier';
+tb.querySelector('.tier-badge').textContent='免费版';
+unlockAI(false);document.getElementById('aiLock').style.display='';
+document.getElementById('btnUpgrade').disabled=false;
+document.getElementById('btnUpgrade').textContent='立即升级';
+}
+document.getElementById('profID').textContent=currentUser.id;
+document.getElementById('profEmail').textContent=currentUser.email;
+document.getElementById('profName').textContent=currentUser.name||'-';
+document.getElementById('profRole').textContent=isVip?'VIP 会员':'免费用户';
+document.getElementById('profKey').textContent=currentUser.api_key||'-';
+document.getElementById('profCreated').textContent=currentUser.created_at||'-';
+switchTab('services');
+loadStats();
+}
+
+function unlockAI(vip){
+var f=document.getElementById('aiForm');var l=document.getElementById('aiLock');
+if(vip){f.classList.remove('lock-overlay');if(l)l.style.display='none'}
+else{f.classList.add('lock-overlay');if(l)l.style.display=''}
+}
+
+async function doUpgrade(){
+if(!currentUser)return;
+// 调用后端 API 真正升级角色
+var r=await apiCall('/api/v1/admin/upgrade',{method:'POST',body:JSON.stringify({user_id:currentUser.id,role:'vip'})});
+if(!r.ok){toast('升级失败：'+(r.data.message||'请重试'),'error');return}
+// 强制重新登录以获取带有 VIP role 的新 Token
+token='';localStorage.removeItem('ai_forge_token');
+toast('角色已升级为 VIP，请重新登录以生效','info');
+setTimeout(function(){doLogout()},1500);
+}
+
+/* ====== IP 归属地查询 ====== */
+async function doIPLookup(){
+var ip=document.getElementById('ipInput').value.trim();
+var table=document.getElementById('ipTable');
+hideEl('ipTable');hideEl('ipErr');
+var url='/api/v1/ip/location'+(ip?'?ip='+encodeURIComponent(ip):'');
+var r=await apiCall(url);
+if(!r.ok||!r.data.data||r.data.data.status!=='success'){
+var msg='查询失败';
+if(r.data.message)msg=r.data.message;
+else if(r.data.data&&r.data.data.message)msg=r.data.data.message;
+document.getElementById('ipErr').textContent=msg;showEl('ipErr');
+return;
+}
+var d=r.data.data;
+document.getElementById('ipAddr').textContent=d.ip||'-';
+document.getElementById('ipCountry').textContent=(d.country||'')+(d.country_code?' ('+d.country_code+')':'');
+document.getElementById('ipRegion').textContent=(d.region_name||'')+(d.region?' ('+d.region+')':'');
+document.getElementById('ipCity').textContent=d.city||'-';
+document.getElementById('ipTz').textContent=d.timezone||'-';
+document.getElementById('ipISP').textContent=d.isp||'-';
+document.getElementById('ipCoord').textContent=(d.lat||'')+', '+(d.lon||'');
+table.style.display='table';table.classList.add('show');
+}
+
+/* ====== 随机图片 ====== */
+async function doRandomImage(){
+var w=parseInt(document.getElementById('imgWidth').value)||800;
+var h=parseInt(document.getElementById('imgHeight').value)||600;
+var cat=document.getElementById('imgCategory').value;
+var img=document.getElementById('imgDisplay');
+var errEl=document.getElementById('imgErr');
+var infoEl=document.getElementById('imgInfo');
+img.style.display='none';img.classList.remove('show');img.src='';img.onload=null;img.onerror=null;hideEl('imgErr');infoEl.textContent='加载中...';
+var url='/api/v1/image/random?width='+w+'&height='+h+(cat?'&category='+encodeURIComponent(cat):'');
+var r=await apiCall(url);
+if(!r.ok||!r.data.data){
+var msg=(r.data&&r.data.message)||'获取失败';
+errEl.textContent=msg;showEl('imgErr');infoEl.textContent='';return;
+}
+var imgUrl=r.data.data.url;
+// 先测试图片能否加载，避免闪烁"加载失败"
+var tester=new Image();
+tester.onload=function(){
+img.src=imgUrl;img.style.display='block';img.classList.add('show');
+infoEl.textContent=r.data.data.width+'x'+r.data.data.height+' · '+r.data.data.provider+' · 类别:'+(cat||'随机');
+};
+tester.onerror=function(){
+// 图片加载失败，用 redirect 端点兜底
+infoEl.textContent='主源加载失败，尝试备用源...';
+img.src='/api/v1/image/redirect?width='+w+'&height='+h+(cat?'&category='+encodeURIComponent(cat):'');
+img.style.display='block';img.classList.add('show');
+infoEl.textContent=w+'x'+h+' · 备用源 · 类别:'+(cat||'随机');
+};
+tester.src=imgUrl;
+}
+
+/* ====== AI 内容创作 ====== */
+async function doAIGenerate(){
+hideEl('aiError');hideEl('aiOutput');
+var tp=document.getElementById('aiType').value;
+var kw=document.getElementById('aiKeyword').value.trim();
+if(!kw){toast('请输入关键词','error');return}
+document.getElementById('aiOutput').textContent='AI 正在生成中...';showEl('aiOutput');
+var body=JSON.stringify({type:tp,keyword:kw});
+var r=await apiCall('/api/v1/ai/content',{method:'POST',body:body});
+if(!r.ok||!r.data.data){
+hideEl('aiOutput');
+var msg='生成失败';
+if(r.status===402)msg='此功能需要 VIP 订阅，请先升级账户';
+else if(r.data.message)msg=r.data.message;
+else if(r.data.error)msg=r.data.error;
+document.getElementById('aiError').textContent=msg;showEl('aiError');
+return;
+}
+document.getElementById('aiOutput').textContent=r.data.data.content;
+showEl('aiOutput');
+loadStats();
+}
+
+/* ====== 使用统计 ====== */
+async function loadStats(){
+var r=await apiCall('/api/v1/usage/stats');
+if(!r.ok||!r.data.data)return;
+var d=r.data.data;
+document.getElementById('statTotal').textContent=d.total_requests||0;
+document.getElementById('statTokens').textContent=d.tokens_used||0;
+document.getElementById('statFree').textContent=d.free_remaining||1000;
+document.getElementById('statVIP').textContent=d.subscription==='vip'?(d.vip_remaining||10000):'-';
+document.getElementById('statLimit').textContent=d.rate_limit||60;
+var chart=document.getElementById('chart');
+var bars=[23,45,32,67,54,89,72];
+chart.innerHTML=bars.map(function(v){return '<div style="flex:1;background:'+(v>60?'#8b5cf6':'#3b82f6')+';height:'+v+'px;border-radius:4px 4px 0 0" title="'+v+' 次"></div>'}).join('');
+}
+
+function copyKey(){
+var k=document.getElementById('profKey').textContent;
+if(!k||k==='-'){toast('没有可复制的 Key','error');return}
+navigator.clipboard.writeText(k).then(function(){toast('API Key 已复制到剪贴板','success')});
+}
+
+/* ====== Tab 切换 ====== */
+function switchTab(name){
+document.querySelectorAll('.tab').forEach(function(b){b.classList.remove('active')});
+event.target.classList.add('active');
+['services','ai-studio','usage','pricing','profile'].forEach(function(t){
+document.getElementById('tab-'+t).style.display=t===name?'grid':'none';
+});
+if(name==='usage')loadStats();
+}
+
+/* ====== 启动 ====== */
+(async function init(){
+try{var res=await fetch(API+'/health');var data=await res.json();if(data.data&&data.data.status==='ok')document.getElementById('serverDot').style.background='#22c55e'}catch(e){}
+var saved=localStorage.getItem('ai_forge_token');if(saved){token=saved;await loadUser()}
+})();
+</script>
+</body>
+</html>

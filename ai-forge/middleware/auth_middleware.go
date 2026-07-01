@@ -1,3 +1,7 @@
+// 文件名: auth_middleware.go
+// 作用: JWT 鉴权中间件
+// 说明: 验证请求头中的 Bearer Token，解析出 user_id 和 user_role 注入上下文
+
 package middleware
 
 import (
@@ -9,14 +13,14 @@ import (
 	"github.com/sunyanf/ai-forge/response"
 )
 
-// AuthMiddleware verifies Authorization: Bearer <token> and sets user_id in context
+// AuthMiddleware JWT 鉴权中间件，验证 Authorization: Bearer <token> 并将 user_id 和 user_role 存入上下文
 func AuthMiddleware() gin.HandlerFunc {
 	return func(c *gin.Context) {
 		auth := c.GetHeader("Authorization")
 		if auth == "" {
 			c.AbortWithStatusJSON(401, response.ErrorResponse{
 				Error:   "Unauthorized",
-				Message: "missing authorization header",
+				Message: "缺少 Authorization 请求头",
 			})
 			return
 		}
@@ -26,7 +30,7 @@ func AuthMiddleware() gin.HandlerFunc {
 		} else {
 			c.AbortWithStatusJSON(401, response.ErrorResponse{
 				Error:   "Unauthorized",
-				Message: "invalid authorization header format",
+				Message: "Authorization 头格式错误，应为 Bearer <token>",
 			})
 			return
 		}
@@ -40,7 +44,7 @@ func AuthMiddleware() gin.HandlerFunc {
 		if err != nil || token == nil || !token.Valid {
 			c.AbortWithStatusJSON(401, response.ErrorResponse{
 				Error:   "Unauthorized",
-				Message: "invalid or expired token",
+				Message: "Token 无效或已过期",
 			})
 			return
 		}
@@ -48,7 +52,7 @@ func AuthMiddleware() gin.HandlerFunc {
 		if !ok {
 			c.AbortWithStatusJSON(401, response.ErrorResponse{
 				Error:   "Unauthorized",
-				Message: "invalid token claims",
+				Message: "Token 声明无效",
 			})
 			return
 		}
@@ -56,7 +60,7 @@ func AuthMiddleware() gin.HandlerFunc {
 		if !ok {
 			c.AbortWithStatusJSON(401, response.ErrorResponse{
 				Error:   "Unauthorized",
-				Message: "invalid subject",
+				Message: "Token 主题无效",
 			})
 			return
 		}
@@ -64,11 +68,17 @@ func AuthMiddleware() gin.HandlerFunc {
 		if err != nil {
 			c.AbortWithStatusJSON(401, response.ErrorResponse{
 				Error:   "Unauthorized",
-				Message: "invalid subject",
+				Message: "Token 主题无效",
 			})
 			return
 		}
 		c.Set("user_id", uint(uid))
+		// 注入用户角色，用于后续 VIP 权限校验
+		role, _ := claims["role"].(string)
+		if role == "" {
+			role = "user"
+		}
+		c.Set("user_role", role)
 		c.Next()
 	}
 }
